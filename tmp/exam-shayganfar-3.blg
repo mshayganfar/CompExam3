@@ -2,47 +2,45 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: exam-shayganfar-3.aux
 The style file: plain.bst
-I found no \citation commands---while reading file exam-shayganfar-3.aux
 Database file #1: mshayganfar.bib
-You've used 0 entries,
+You've used 6 entries,
             2118 wiz_defined-function locations,
-            497 strings with 4018 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            532 strings with 4792 characters,
+and the built_in function-call counts, 1699 in all, are:
+= -- 160
+> -- 58
+< -- 1
++ -- 26
+- -- 17
+* -- 87
+:= -- 287
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 6
+duplicate$ -- 83
+empty$ -- 158
+format.name$ -- 17
+if$ -- 367
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 6
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 14
+pop$ -- 43
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 20
 quote$ -- 0
-skip$ -- 1
+skip$ -- 51
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 86
+swap$ -- 15
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 16
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+while$ -- 17
+width$ -- 7
+write$ -- 65

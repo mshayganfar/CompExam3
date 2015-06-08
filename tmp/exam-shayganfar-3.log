@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  7 JUN 2015 19:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  8 JUN 2015 15:18
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -207,31 +207,56 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./exam-shayganfar-3.bbl
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./exam-shayganfar-3.aux) ) 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [2]
+Overfull \hbox (16.28516pt too wide) in paragraph at lines 113--118
+[][]\OT1/cmr/m/n/10.95 Computational tractabil-ity: Be-lief net-works are com-p
+u-ta-tion-ally tractable
+ []
+
+[3] (./exam-shayganfar-3.bbl [4]) [5] (./exam-shayganfar-3.aux) ) 
 Here is how much of TeX's memory you used:
- 2347 strings out of 495028
- 30815 string characters out of 6181497
- 85070 words of memory out of 5000000
- 5545 multiletter control sequences out of 15000+600000
- 6365 words of font info for 23 fonts, out of 8000000 for 9000
+ 2413 strings out of 495028
+ 31888 string characters out of 6181497
+ 87088 words of memory out of 5000000
+ 5589 multiletter control sequences out of 15000+600000
+ 11059 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,4n,26p,249b,133s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-csc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on exam-shayganfar-3.pdf (1 page, 60083 bytes).
+ 38i,5n,26p,249b,205s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti10.pfb>
+Output written on exam-shayganfar-3.pdf (5 pages, 115936 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,3 +1,36 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{das:decision-making-agents}
+Subrata Das.
+\newblock {\em Foundations Of Decision-Making Agents: Logic, Probability and
+  Modality}.
+\newblock World Scientific Publishing Co., 2008.
+
+\bibitem{dempster:theory}
+Arthur~P. Dempster.
+\newblock A generalization of bayesian inference.
+\newblock {\em Journal of the Royal Statistical Society}, 30(B):205--247, 1968.
+
+\bibitem{diez:reasoning-uncertainty}
+Francisco~J. Diez and Marek~J. Druzdzel.
+\newblock Reasoning under uncertainty.
+\newblock In L.~Nadel, editor, {\em Encyclopedia of Cognitive Science}, pages
+  880--886. London: Nature Publishing Group, 2003.
+
+\bibitem{russell:ai-modern}
+Stuart~J. Russell and Peter Norvig.
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Pearson Education, 2003.
+
+\bibitem{shafer:evidence-theory}
+Glenn Shafer.
+\newblock {\em A Mathematical Theory of Evidence}.
+\newblock Princeton University Press, 1976.
+
+\bibitem{tanimoto:ai-lisp}
+Steven Tanimoto.
+\newblock {\em The elements of artificial intelligence: an introduction using
+  LISP}.
+\newblock Computer Science Press, 1987.
 
 \end{thebibliography}
