@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage[mathscr]{euscript}
 \usepackage{mathtools}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -144,11 +145,13 @@ called as \textit{belief interval}. Furthermore, the mass assigned to $\Theta$
 can be interpreted as the global ignorance since this weight of evidence is not
 discernible among the hypothesis.
 
-Dempster-Shafer theory also provides a method to combine the measures of
-evidence from different sources, using Dempster's rule of combination. The rule
-assumes that the sources are independent. If $m_1$ and $m_2$ are the BPA's
-associated with $Bel_1$ and $Bel_2$ respectively and $Bel_1$ and $Bel_2$ are
-independent, then Dempster's rule of combination is as follows:\\
+Suppose that we have two pieces of uncertain evidence relevant to the same
+$\Theta$. Dempster-Shafer theory also provides a method to combine the measures
+of evidence from different sources, using Dempster's rule of combination which
+combines two pieces of evidence into a single new piece. The rule assumes that
+the sources are independent. If $m_1$ and $m_2$ are the BPA's associated with
+$Bel_1$ and $Bel_2$ respectively and $Bel_1$ and $Bel_2$ are independent, then
+Dempster's rule of combination is as follows:\\
 
 \[
 	[m_1 \oplus m_2](y) = 
@@ -161,7 +164,12 @@ independent, then Dempster's rule of combination is as follows:\\
 	\end{dcases}
 \]\\
 
-\noindent and is a BPA.
+\noindent and is a BPA. The denominator in the Dempster's rule of combination,
+i.e., $1-\sum\limits{_{A \cap B \neq \emptyset}}m_1(A)m_2(B)$, is an important
+normalization factor denoted by $\mathcal{K}$. It can be interpreted as a
+measure of conflict between the sources
+\cite{srivastava:evidential-reasoning-uncertainty}.
+
 \subsection{Fuzzy Logic}
 
 \subsection{Other approaches}
@@ -238,6 +246,12 @@ Mixtures of Truncated Potentials. But these techniques are yet to be incorporate
 in commercial software.
 
 \subsection{Advantages and Disadvantages of Dempster-Shafer Theory}
+
+- Its ability to represent ignorance in a direct and straightforward fashion.
+
+- Its consistency with classical probability theory.
+
+- Its manageable computational complexity.
 
 - Represents the actual state of belief more precisely
 
