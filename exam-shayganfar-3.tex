@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[mathscr]{euscript}
+\usepackage{mathtools}
 
 \begin{document}
 
@@ -105,9 +106,9 @@ intersections with \textit{A}, and it represents the extent to which we fail to
 disbelieve \textit{A}. The plausibility and belief functions are related to one
 another and we can represent this relation as:\\
 
-\textit{Belief}(\textit{A}) = 1 - \textit{Plausibility}(\textit{$\neg$A}) $\quad$
-and $\quad$ \textit{Plausibility}(\textit{A}) = 1 -
-\textit{Belief}(\textit{$\neg$A}),\\
+\noindent\textit{Belief}(\textit{A}) = 1 -
+\textit{Plausibility}(\textit{$\neg$A}) $\quad$ and $\quad$
+\textit{Plausibility}(\textit{A}) = 1 - \textit{Belief}(\textit{$\neg$A}),\\
 
 \noindent where \textit{$\neg$A} is \textit{A}'s complement, and also
 \textit{Belief}(\textit{$\neg$A}) is often called the \textit{doubt} in \textit{A}.
@@ -128,6 +129,39 @@ singletons then we return back to traditional Bayesian analysis incorporating
 normal probability theory, since in this case \textit{Belief}(\textit{A}) =
 \textit{Plausibility}(\textit{A}) \cite{beynon:dst-alternative-decision}.
 
+[It is shown in [22] that all the above three measures of con®dence and the BPA
+are equivalent, in the sense that each of them can be expressed as a function of
+any one of the rest.]
+
+Collectively the above measures provide Dempster-Shafer theory with an explicit
+measure of ignorance about \textit{A} and its complement. Although, the above
+three measures of confidence and the BPA are equivalent, in the sense that each
+of them can be expressed as a function of any one of the rest. The measure
+is defined as the length of the interval [\textit{Belief}(\textit{A}),
+\textit{Plausiblity}(\textit{A})] where \textit{Belief}(\textit{A}) $\leqslant$
+\textit{Plausiblity}(\textit{A}) \cite{yager:dst-combination-rules}, and it is
+called as \textit{belief interval}. Furthermore, the mass assigned to $\Theta$
+can be interpreted as the global ignorance since this weight of evidence is not
+discernible among the hypothesis.
+
+Dempster-Shafer theory also provides a method to combine the measures of
+evidence from different sources, using Dempster's rule of combination. The rule
+assumes that the sources are independent. If $m_1$ and $m_2$ are the BPA's
+associated with $Bel_1$ and $Bel_2$ respectively and $Bel_1$ and $Bel_2$ are
+independent, then Dempster's rule of combination is as follows:\\
+
+\[
+	[m_1 \oplus m_2](y) = 
+    \begin{dcases}
+      0, & y = \emptyset \\
+      \frac{\sum\limits_{A \cap B = y}m_1(A)m_2(B)}{1-\sum\limits_{A
+      \cap B \neq \emptyset}m_1(A)m_2(B)}, & y
+      \neq
+      \emptyset
+	\end{dcases}
+\]\\
+
+\noindent and is a BPA.
 \subsection{Fuzzy Logic}
 
 \subsection{Other approaches}
