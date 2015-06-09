@@ -55,14 +55,78 @@ evidence or to change prior oopinions in the light of new evidence
 with the distinction between uncertainty and ignorance. Rather than computing
 the probability of a proposition, it computes the probability that the evidence
 supports the proposition \cite{russell:ai-modern} and it does not require the
-assumption that \textit{Bel}(A) + \textit{Bel}($\neg$A) = 1. Dempster-Shafer
+assumption that \textit{Belief}(A) + \textit{Belief}($\neg$A) = 1. Dempster-Shafer
 theory deals with the possible values of an unknown variable, just as deos the
 theory of probability \cite{tanimoto:ai-lisp}. 
 
-This approach starts out with a \textit{belief function} (sometimes called a
-support function). Given a set W of possible worlds and $U \subseteq W$, the
-belief in U, denoted \textit{Bel}(\textit{U}), is a number in the interval [0,
-1].
+There are three basic functions in the Dempster-Shafer theory that we need to
+understand for modeling purposes. Let $\Theta=\{h_1,h_2, \ldots, h_n\}$ be a
+finite set of hypotheses. This set of hypotheses is also called \textit{frame of
+discerntment}. A \textit{Basic Probability Assignment} (BPA) or \textit{mass
+function} is a function $m:2^\Theta\rightarrow[0,1]$ such that:\\
+
+\textit{m}($\emptyset$) = 0, and $\sum\limits_{x\in2^\Theta}m(x) =1$.\\
+
+The value 0 indicates no belief and the value 1 indicates total belief, and
+any value between these two indicate partial belief. As you see the mass
+function uses the notion of $2^\Theta$ to be able to use all possible subsets of
+the \textit{frame of discernment} $\Theta$. All of the assigned probabilities
+sum to unity. There is no belief in empty set. Any subset x of the frame of
+discernment $\Theta$ for which m(x) is non-zero is called a \textit{focal
+element} and represents the exact belief in the proposition depicted by x. Thus,
+any subset is proposition and vice versa. Other elements in Dempster-Shafer
+theory are defined by BPA. Now, we can define another important notion in
+Dempster-Shafer theory, the \textit{belief function} (sometimes called a
+\textit{support function}). A belief function is a function
+$Belief:2^\Theta\rightarrow[0,1]$. It is the measure of total belief committed
+to $A \subseteq \Theta$ that can be obtained by simply adding up the mass of all
+the subsets of \textit{A}. In other words, given the frame of discernment
+$\Theta$ and $A \subseteq \Theta$, the belief in \textit{A}, denoted
+\textit{Belief}(\textit{A}), is a number in the interval [0, 1]. A belief
+function \textit{Belief} defined on a space $\Theta$ must satisfy the following
+three properties:
+
+\begin{itemize}
+	\item[]\textit{\textbf{p1.}} \textit{Belief}($\emptyset$) = 0
+	\item[]\textit{\textbf{p2.}} \textit{Belief}($\Theta$) = 1
+	\item[]\textit{\textbf{p3.}} \textit{Belief}(\textit{A}) = $\sum\limits_{B
+	\subseteq A}m(B)\qquad$ for all $A \subseteq \Theta$
+\end{itemize}
+
+A \textit{plausibility} measure is a function
+$Plausible:2^\Theta\rightarrow[0,1]$, and is defined by:\\
+
+\textit{Plausible}(\textit{A}) = $\sum\limits_{B \cap A \neq
+\emptyset}m(B)\qquad$ for all $A \subseteq \Theta$\\
+
+\noindent \textit{Plausible}(\textit{A}) in a subset \textit{A} is defined to
+be the sum of all mass functions for the subsets \textit{B} that have non-zero
+intersections with \textit{A}, and it represents the extent to which we fail to
+disbelieve \textit{A}. The plausibility and belief functions are related to one
+another and we can represent this relation as:\\
+
+\textit{Belief}(\textit{A}) = 1 - \textit{Plausibility}(\textit{$\neg$A}) $\quad$
+and $\quad$ \textit{Plausibility}(\textit{A}) = 1 -
+\textit{Belief}(\textit{$\neg$A}),\\
+
+\noindent where \textit{$\neg$A} is \textit{A}'s complement, and also
+\textit{Belief}(\textit{$\neg$A}) is often called the \textit{doubt} in \textit{A}.
+It is noteworthy to mention that Dempster-Shafer theory allows the
+representation of \textit{ignorance} since \textit{Belief}(\textit{A}) = 0 does not
+imply \textit{Belief}(\textit{$\neg$A}) $\textgreater$ 0 even though
+\textit{Belief}(\textit{$\neg$A}) = 1 implies \textit{Belief}(\textit{A}) = 0. Other
+notable relations are:\\
+
+\noindent\textit{Belief}(\textit{A}) + \textit{Belief}(\textit{$\neg$A}) $\leq$ 1,
+and\\
+
+\noindent\textit{Plausiblity}(\textit{A}) +
+\textit{Plausiblity}(\textit{$\neg$A}) $\geq$ 1.\\
+
+Here, we also note that in the case of each of the focal elements being
+singletons then we return back to traditional Bayesian analysis incorporating
+normal probability theory, since in this case \textit{Belief}(\textit{A}) =
+\textit{Plausibility}(\textit{A}) \cite{beynon:dst-alternative-decision}.
 
 \subsection{Fuzzy Logic}
 

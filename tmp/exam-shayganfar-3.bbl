@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{beynon:dst-alternative-decision}
+Malcolm Beynon, Bruce Curry, and Peter Morgan.
+\newblock The dempster–shafer theory of evidence: an alternative approach to
+  multicriteria decision modelling.
+\newblock {\em Omega, The International Journal of Management Science},
+  28(1):37--50, 2000.
+
 \bibitem{das:decision-making-agents}
 Subrata Das.
 \newblock {\em Foundations Of Decision-Making Agents: Logic, Probability and
