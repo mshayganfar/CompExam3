@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  9 JUN 2015 11:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  9 JUN 2015 13:42
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -250,128 +250,173 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 64--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--109
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
- []
+LaTeX Warning: Command \textless invalid in math mode on input line 117.
 
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 118.
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 118.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 117.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 117.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 117.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
+
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 138.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 138.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
+
+ []
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 164.
+
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 118.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 164.
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 164.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 118.
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--121
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ® in font cmr10!
+<figure/uncertainty.png, id=28, 1157.32375pt x 493.845pt>
+File: figure/uncertainty.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--155
+<use figure/uncertainty.png>
+Package pdftex.def Info: figure/uncertainty.png used on input line 202.
+(pdftex.def)             Requested size: 233.9978pt x 99.84482pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--215
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
+[5 <./figure/uncertainty.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 266.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 266.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [4]
-Overfull \hbox (16.28516pt too wide) in paragraph at lines 219--224
+
+Overfull \hbox (16.28516pt too wide) in paragraph at lines 281--286
 [][]\OT1/cmr/m/n/10.95 Computational tractabil-ity: Be-lief net-works are com-p
 u-ta-tion-ally tractable
  []
 
-[5] (./exam-shayganfar-3.bbl
+[6] [7] (./exam-shayganfar-3.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [6]
+ [8]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [7] (./exam-shayganfar-3.aux) ) 
+) [9] (./exam-shayganfar-3.aux) ) 
 Here is how much of TeX's memory you used:
- 2973 strings out of 495028
- 41613 string characters out of 6181497
- 99443 words of memory out of 5000000
- 6134 multiletter control sequences out of 15000+600000
- 11418 words of font info for 42 fonts, out of 8000000 for 9000
+ 3000 strings out of 495028
+ 41986 string characters out of 6181497
+ 100455 words of memory out of 5000000
+ 6155 multiletter control sequences out of 15000+600000
+ 14161 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,26p,249b,213s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,26p,249b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb>
-Output written on exam-shayganfar-3.pdf (7 pages, 182372 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
+10.pfb>
+Output written on exam-shayganfar-3.pdf (9 pages, 237203 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

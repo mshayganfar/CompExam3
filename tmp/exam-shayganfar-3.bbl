@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{beynon:dst-alternative-decision}
 Malcolm Beynon, Bruce Curry, and Peter Morgan.
@@ -23,6 +23,12 @@ Francisco~J. Diez and Marek~J. Druzdzel.
 \newblock Reasoning under uncertainty.
 \newblock In L.~Nadel, editor, {\em Encyclopedia of Cognitive Science}, pages
   880--886. London: Nature Publishing Group, 2003.
+
+\bibitem{kay:dst-reliability}
+Rakowsky~Uwe Kay.
+\newblock Fundamentals of the dempster-shafer theory and its applications to
+  system safety and reliability modelling.
+\newblock {\em Reliability : Theory \& Applications}, 3(4):173--185, 2007.
 
 \bibitem{russell:ai-modern}
 Stuart~J. Russell and Peter Norvig.
