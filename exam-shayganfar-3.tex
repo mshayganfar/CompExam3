@@ -44,22 +44,21 @@
 
 In \cite{dempster:theory}, Dempster proposed a probabilistic framework based on
 lower and upper bounds on probabilities. In \cite{shafer:evidence-theory},
-Shafer developed a formalism for reasoning under uncertaintythat used some of
-Dempster's mathematical expressions, but gave them a different interpretation:
-each piece of evidence (finding) may support a subset containing several
-hypotheses. This is a generalization of the pure probabilistic framework in
-which every finding corresponds to a value of a variable (a single hypothesis)
-\cite{diez:reasoning-uncertainty}. Dempster-Shafer theory is the generalization
-of the Bayesian theory of subjective probability (mainly by virtue of its
-explicit definition of the concept of ignorance) to combine accumulative
-evidence or to change prior opinions in the light of new evidence
-\cite{das:decision-making-agents}. Dempster-Shafer theory is designed to deal
-with the distinction between uncertainty and ignorance. Rather than computing
-the probability of a proposition, it computes the probability that the evidence
-supports the proposition \cite{russell:ai-modern} and it does not require the
-assumption that \textit{Belief}(A) + \textit{Belief}($\neg$A) = 1. Dempster-Shafer
-theory deals with the possible values of an unknown variable, just as deos the
-theory of probability \cite{tanimoto:ai-lisp}. 
+Shafer developed a formalism for reasoning under uncertainty which uses some of
+Dempster's mathematical expressions with different interpretation. Based on
+Shafer's formalism, each piece of evidence may support a subset containing
+several hypotheses. This is a generalization of the pure probabilistic framework
+in which every finding corresponds to a value of a variable (a single
+hypothesis) \cite{diez:reasoning-uncertainty}. Therefore, Dempster-Shafer theory
+is the generalization of the Bayesian theory of subjective probability to
+combine accumulative evidence or to change prior opinions in the light of new
+evidence \cite{das:decision-making-agents}. Dempster-Shafer theory is designed
+to deal with the distinction between uncertainty and ignorance. Rather than
+computing the probability of a proposition, it computes the probability that the
+evidence supports the proposition \cite{russell:ai-modern}, and it does not
+require the assumption that \textit{Belief}(A) + \textit{Belief}($\neg$A) = 1.
+Dempster-Shafer theory deals with the possible values of an unknown variable,
+just as deos the theory of probability \cite{tanimoto:ai-lisp}.
 
 There are three basic functions in the Dempster-Shafer theory that we need to
 understand for modeling purposes, \textit{mass function, belief function}, and
@@ -68,17 +67,20 @@ finite set of hypotheses. This set of hypotheses is also called \textit{frame of
 discerntment}. The hypotheses represent all the possible states of the system
 considered. The set of all subsets of $\Theta$ is its \textit{power set}:
 $2^\Theta$. A subset of these $2^\Theta$ sets may consist of a single hypothesis
-or of a conjunction of several hypotheses (e.g., a snow or a dry day). The
-pieces of \textit{evidence} are events that occurred or may occur (e.g., high
-pressure shown by a barometer, or low temprature). One piece of evidence can be
-related to a single hypothesis or a set of hypotheses. However, it is not
-allowed to have different pieces of evidence lead to the same hypothesis or set
-of hypotheses. In fact, the relation between a piece of evidence and a
-hypothesis corresponds to a cause-effect chain, i.e., a piece of evidence
-implies a hypothesis or a set of hypotheses \cite{kay:dst-reliability}.
-Moreover, it is required that all hypotheses are unique, not overlapping and
-mutually exclusive. A \textit{Basic Probability Assignment} (BPA) or
-\textit{mass function} is a function $m:2^\Theta\rightarrow[0,1]$ such that:\\
+or of a conjunction of several hypotheses (e.g., a snowy day and a dry day). The
+pieces of evidence are events that occurred or may occur (e.g., high pressure
+shown by a barometer, or low temprature). One piece of evidence can be related
+to a single hypothesis or a set of hypotheses. However, it is not allowed to
+have different pieces of evidence lead to the same hypothesis or set of
+hypotheses. In fact, the relation between a piece of evidence and a hypothesis
+corresponds to a cause-effect chain, i.e., a piece of evidence implies a
+hypothesis or a set of hypotheses \cite{kay:dst-reliability}. Moreover, it is
+required that all hypotheses are unique, not overlapping and mutually exclusive.
+
+\subsubsection{Mass Function}
+
+A \textit{Basic Probability Assignment} (BPA) or \textit{mass function}
+is a function $m:2^\Theta\rightarrow[0,1]$ such that:\\
 
 \textit{m}($\emptyset$) = 0, and $\sum\limits_{x\in2^\Theta}m(x) =1$.\\
 
@@ -90,7 +92,9 @@ sum to unity. There is no belief in empty set. Any subset x of the frame of
 discernment $\Theta$ for which m(x) is non-zero is called a \textit{focal
 element} and represents the exact belief in the proposition depicted by x. Thus,
 any subset is proposition and vice versa. Other elements in Dempster-Shafer
-theory are defined by BPA. 
+theory are defined by mass function. 
+
+\subsubsection{Belief Function}
 
 Now, we can define another important notion in Dempster-Shafer theory, the
 \textit{belief function} (sometimes called a \textit{support function}). It is
@@ -100,44 +104,43 @@ words, given the frame of discernment $\Theta$ and $A \subseteq \Theta$, the
 belief in \textit{A}, denoted \textit{Belief}(\textit{A}), is a number in the
 interval [0, 1]. Belief in a set of elements, say \textit{A}, of a frame
 $\Theta$, represents the total belief that one has based on the evidence
-obtained. It is the sum of all the belief masses assigned to elements that are
-contained in the set \textit{A} and the belief mass assigned to the set
-\textit{A}. Unlike probability theory, \textit{Belief}(\textit{A}) = 0
-represents lack of evidence about \textit{A}, while \textit{p}(A) = 0 represents
-the impossibility of \textit{A}. However, \textit{Belief}(\textit{A}) = 1
-represents certainty, that is \textit{A} is certain to occur, similar to
-\textit{p}(A) = 1, which also represents the certainty that \textit{A} is true.
-A belief function \textit{Belief} defined on a space $\Theta$ must satisfy the
-following three properties:
+obtained. Unlike probability theory, \textit{Belief}(\textit{A}) = 0 represents
+lack of evidence about \textit{A}, while \textit{p}(A) = 0 represents the
+impossibility of \textit{A}. However, \textit{Belief}(\textit{A}) = 1 represents
+certainty, that is \textit{A} is certain to occur, similar to \textit{p}(A) = 1,
+which also represents the certainty that \textit{A} is true. A belief function
+defined on a space $\Theta$ must satisfy the following three properties:
 
 \begin{itemize}
-	\item[]\textit{\textbf{p1.}} \textit{Belief}($\emptyset$) = 0
-	\item[]\textit{\textbf{p2.}} \textit{Belief}($\Theta$) = 1
-	\item[]\textit{\textbf{p3.}} \small\textit{Belief}($A_1 \cup \ldots A_n$)
+	\item[]\textit{Belief}($\emptyset$) = 0
+	\item[]\textit{Belief}($\Theta$) = 1
+	\item[]\small\textit{Belief}($A_1 \cup \ldots A_n$)
 	$\geq \sum\limits_i\textit{Belief}$($A_i$) - $\sum\limits_{i \textless
 	j}\textit{Belief}$($A_i \cap A_j$) + \ldots +\\
-	$(-1)^{n+1}\textit{Belief}$($A_i \cap \ldots \cap A_n$)\\ \\
+	$(-1)^{n+1}\textit{Belief}$($A_i \cap \ldots \cap A_n$)
 \end{itemize}
 
-A belief function is a function $Belief:2^\Theta\rightarrow[0,1]$ and is defined
-by:
+\noindent A belief function is a function $Belief:2^\Theta\rightarrow[0,1]$ and
+is defined by:\\
 
 \textit{Belief}(\textit{A}) = $\sum\limits_{B \subseteq A}m(B)\qquad$ for all $A
-\subseteq \Theta$
+\subseteq \Theta$\\
+
+\subsubsection{Plausibility Function}
 
 Plausibility in a set, say \textit{A} of a frame $\Theta$ consisting of a
-mutually exclusive and exhaustive set of elements represents the maximum
-possibility that a set \textit{A} is true given all the evidence. A plausibility
-function \textit{Plausible} defined on a space $\Theta$ must satisfy the
+mutually exclusive and exhaustive set of elements, represents the maximum
+possibility that a set \textit{A} is true given all the evidences. A
+plausibility function \textit{Plausible} defined on a space $\Theta$ must satisfy the
 following three properties:
 
 \begin{itemize}
-	\item[]\textit{\textbf{p1.}} \textit{Plausible}($\emptyset$) = 0
-	\item[]\textit{\textbf{p2.}} \textit{Plausible}($\Theta$) = 1
-	\item[]\textit{\textbf{p3.}} \small\textit{Plausible}($A_1 \cap \ldots A_n$)
+	\item[]\textit{Plausible}($\emptyset$) = 0
+	\item[]\textit{Plausible}($\Theta$) = 1
+	\item[]\small\textit{Plausible}($A_1 \cap \ldots A_n$)
 	$\leq \sum\limits_i\textit{Plausible}$($A_i$) - $\sum\limits_{i \textless
 	j}\textit{Plausible}$($A_i \cup A_j$) + \ldots +\\
-	$(-1)^{n+1}\textit{Plausible}$($A_i \cup \ldots \cup A_n$)\\ \\
+	$(-1)^{n+1}\textit{Plausible}$($A_i \cup \ldots \cup A_n$)
 \end{itemize}
 
 A \textit{plausibility} measure is a function
@@ -151,51 +154,30 @@ be the sum of all mass functions for the subsets \textit{B} that have non-zero
 intersections with \textit{A}, and it represents the extent to which we fail to
 disbelieve \textit{A}. In other words, it corresponds to the total belief that
 does not contradict \textit{A}. The plausibility and belief functions are
-related to one another and we can represent this relation as:\\
+related to one another, and we can represent this relation as:\\
 
 \noindent\textit{Belief}(\textit{A}) = 1 -
-\textit{Plausibility}(\textit{$\neg$A}) $\quad$ and $\quad$
-\textit{Plausibility}(\textit{A}) = 1 - \textit{Belief}(\textit{$\neg$A}),\\
+\textit{Plausible}(\textit{$\neg$A}) $\quad$ and $\quad$
+\textit{Plausible}(\textit{A}) = 1 - \textit{Belief}(\textit{$\neg$A}),\\
 
-\noindent where \textit{$\neg$A} is \textit{A}'s complement, and also
-\textit{Belief}(\textit{$\neg$A}) is often called the \textit{doubt} in \textit{A}.
-It is noteworthy to mention that Dempster-Shafer theory allows the
-representation of \textit{ignorance} since \textit{Belief}(\textit{A}) = 0 does not
-imply \textit{Belief}(\textit{$\neg$A}) $\textgreater$ 0 even though
+\noindent where \textit{$\neg$A} is \textit{A}'s complement. Also,
+\textit{Belief}(\textit{$\neg$A}) is often called the \textit{doubt} in
+\textit{A}. It is noteworthy to mention that Dempster-Shafer theory allows the
+representation of \textit{ignorance} since \textit{Belief}(\textit{A}) = 0 does
+not imply \textit{Belief}(\textit{$\neg$A}) $\textgreater$ 0 even though
 \textit{Belief}(\textit{$\neg$A}) = 1 implies \textit{Belief}(\textit{A}) = 0. Other
 notable relations are:\\
 
 \noindent\textit{Belief}(\textit{A}) + \textit{Belief}(\textit{$\neg$A}) $\leq$ 1,
 and\\
 
-\noindent\textit{Plausiblity}(\textit{A}) +
-\textit{Plausiblity}(\textit{$\neg$A}) $\geq$ 1.\\
+\noindent\textit{Plausible}(\textit{A}) +
+\textit{Plausible}(\textit{$\neg$A}) $\geq$ 1.\\
 
 Here, we also note that in the case of each of the focal elements being
 singletons then we return back to traditional Bayesian analysis incorporating
 normal probability theory, since in this case \textit{Belief}(\textit{A}) =
-\textit{Plausibility}(\textit{A}) \cite{beynon:dst-alternative-decision}.
-
-[It is shown in [22] that all the above three measures of con®dence and the BPA
-are equivalent, in the sense that each of them can be expressed as a function of
-any one of the rest.]
-
-Collectively the above measures provide Dempster-Shafer theory with an explicit
-measure of ignorance about \textit{A} and its complement. Although, the above
-three measures of confidence and the BPA are equivalent, in the sense that each
-of them can be expressed as a function of any one of the rest. The measure
-is defined as the length of the interval [\textit{Belief}(\textit{A}),
-\textit{Plausiblity}(\textit{A})] where \textit{Belief}(\textit{A}) $\leqslant$
-\textit{Plausiblity}(\textit{A}) \cite{yager:dst-combination-rules}, and it is
-called as \textit{belief interval}. Figure \ref{fig:uncertainty} illustartes a
-graphical representation of the belief, plausibility, and doubt measures which
-we defined above. As it is shown and said earlier, the difference between
-plausibility and belief describes the evidential interval range which represents
-the uncertainty concerning the set \textit{A}. Alos, as we see, lack of belief
-does not imply disbelief, since the complements of belief and plausibility are
-doubt and disbelief, respectuvely. Furthermore, the mass assigned to $\Theta$
-can be interpreted as the global ignorance since this weight of evidence is not
-discernible among the hypothesis.
+\textit{Plausible}(\textit{A}) \cite{beynon:dst-alternative-decision}.
 
 \begin{figure}[tbh]
   \center
@@ -205,13 +187,33 @@ discernible among the hypothesis.
   \label{fig:uncertainty}
 \end{figure}
 
-Suppose that we have two pieces of uncertain evidence relevant to the same
-$\Theta$. Dempster-Shafer theory also provides a method to combine the measures
-of evidence from different sources, using Dempster's rule of combination which
-combines two pieces of evidence into a single new piece. The rule assumes that
-the sources are independent. If $m_1$ and $m_2$ are the BPA's associated with
-$Bel_1$ and $Bel_2$ respectively and $Bel_1$ and $Bel_2$ are independent, then
-Dempster's rule of combination is as follows:\\
+Collectively the above measures provide Dempster-Shafer theory with an explicit
+measure of ignorance about \textit{A} and its complement. All the above measures
+of confidence and the BPA are equivalent, in the sense that each of them can be
+expressed as a function of any one of the rest. The \textit{uncertainty}
+measure is defined as the length of the interval [\textit{Belief}(\textit{A}),
+\textit{Plausible}(\textit{A})] where \textit{Belief}(\textit{A}) $\leqslant$
+\textit{Plausible}(\textit{A}) \cite{yager:dst-combination-rules}, and it is
+also called as \textit{belief interval}. Figure \ref{fig:uncertainty}
+illustartes a graphical representation of the belief, plausibility, and doubt
+measures which we defined above. As it is shown and said earlier, the difference
+between plausibility and belief describes the evidential interval range which
+represents the uncertainty concerning the set \textit{A}. Also, as we see in
+Figure \ref{fig:uncertainty}, lack of belief does not imply disbelief, since the
+complements of belief and plausibility are doubt and disbelief, respectuvely.
+Furthermore, the mass assigned to $\Theta$ can be interpreted as the global
+ignorance, since the level of mass value is not discernible among the
+hypotheses.
+
+\subsubsection{Dempster's Rule of Combination}
+
+Suppose that we have two pieces of uncertain evidence relevant to the same frame of
+discerntment $\Theta$. Dempster-Shafer theory also provides a method to combine
+the measures of evidence from different sources, using Dempster's rule of
+combination which combines two pieces of evidence into a single new piece. The
+rule assumes that the sources are independent. If $m_1$ and $m_2$ are the BPA's
+associated with $Bel_1$ and $Bel_2$ respectively and $Bel_1$ and $Bel_2$ are
+independent, then Dempster's rule of combination is as follows:\\
 
 \[
 	[m_1 \oplus m_2](y) = 
@@ -224,12 +226,12 @@ Dempster's rule of combination is as follows:\\
 	\end{dcases}
 \]\\
 
-\noindent and is a BPA. The numerator, i.e., $\sum\limits{_{A \cap B
-=y}}m_1(A)m_2(B)$, represents the accumulated evidence for the sets A and B,
-which supports the given hypothesis y. The denominator in the Dempster's rule of
-combination, i.e., $1-\sum\limits{_{A \cap B \neq \emptyset}}m_1(A)m_2(B)$, is
-an important normalization factor denoted by $\mathcal{K}$. It can be
-interpreted as a measure of conflict between the sources
+\noindent The numerator, i.e., $\sum\limits{_{A \cap B =y}}m_1(A)m_2(B)$,
+represents the accumulated evidence for the sets A and B, which supports the
+given hypothesis y. The denominator in the Dempster's rule of combination, i.e.,
+$1-\sum\limits{_{A \cap B \neq \emptyset}}m_1(A)m_2(B)$, is an important
+normalization factor denoted by $\mathcal{K}$ which can be interpreted as a
+measure of conflict between the sources
 \cite{srivastava:evidential-reasoning-uncertainty}.
 
 \subsection{Fuzzy Logic}
@@ -319,6 +321,8 @@ in commercial software.
 
 - Distinguishes randomness from missing information
 
+- Prior probabilities not required.
+
 Dis:
 
 - Lack of assessment strategies: There is a necessity to assign precise numbers
@@ -343,6 +347,8 @@ hypotheses.
 
 - A small modification of the evidence assignments may lead to a completely
 different conclusion.
+
+- Can lead to misleading and counter-intuitive results.
 
 \subsection{Advantages and Disadvantages of Fuzzy Logic}
 
