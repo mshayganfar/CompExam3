@@ -274,6 +274,37 @@ rules with respect to the given input value, and merges the results obtained
 from each rule. Finally, the ovelall result will be transfered to a non-fuzzy
 (scalar) value (see Section \ref{sec:defuzzification}).
 
+\subsubsection{Probability vs Possibility}
+
+Based on the Fuzzy Logic theory of Zadeh \cite{zadeh:fuzzy} there is a
+difference between possibility of an event happening and the probability of
+that. The follwing example by Zimmermann in \cite{zimmermann:fuzzy-sets} shows
+the differnce. Consider the statement ``Hans ate \textit{X} eggs for
+breakfast'', where \textit{X} $\in$ \textit{U} = {1, 2, \ldots, 8}. We may
+associate a probability \textit{p} by observing \textit{Hans} eating breakfast
+for 100 days,
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.65\textwidth]{figure/prob-poss-01.png}
+  \label{fig:probability}
+\end{figure}
+
+A fuzzy set expressing the degree to which \textit{Hans} can eat \textit{X} eggs
+in breakfast may be the following possibilty distribution $\pi$,
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.65\textwidth]{figure/prob-poss-02.png}
+  \label{fig:ppssibility}
+\end{figure}
+
+where the possiibility of \textit{X} = 3 is 1, while the probability of
+\textit{Hnas} eating 3 eggs for breakfast is only 0.1. Therefore, the example
+shows, that a possible event does not necessarily imply that it is probable too.
+However, if the event is probable it must also be possible
+\cite{zimmermann:fuzzy-sets}.
+
 \subsubsection{Membership Functions}
 \label{sec:membership-function}
 
@@ -318,9 +349,10 @@ determines an output response.
 Let $\mathcal{X}$ be a classical universal set. A fuzzy subset $\textit{A}$ of
 $\mathcal{X}$ is characterized by a \textit{membership function}: $\mu_A$ :
 $\mathcal{X} \rightarrow$ [0, 1]. $\mu_A$($\textit{x}$) is called the
-\textit{membership degree} of $\textit{x}$ in $\textit{A}$. The degree of
-membership is expressed by a real number in the interval [0, 1]. The followings
-define some of the important properties of membership function.\\
+\textit{membership degree (grade)} of $\textit{x}$ in $\textit{A}$. The degree
+of membership is expressed by a real number in the interval [0, 1]. The degree
+of membership is a precise, but subjective measure that depends on the context.
+The followings define some of the important properties of membership function.\\
 
 \textbf{Height:} The height of $\textit{A}$, denoted by
 $\textit{h}$($\textit{A}$), corresponds to the upper bound of the membership
@@ -329,7 +361,8 @@ function:\\ \\$\textit{h}$($\textit{A}$) = sup$\{\mu_A(\textit{x}) | \textit{x}
 
 \textbf{Support:} The support of $\textit{A}$ is a set of all elements
 \textit{x} of $\mathcal{X}$ for which (\textit{x}, $\mu_A$(\textit{x})) $\in$
-$\textit{A}$ and $\mu_A$(\textit{x}) $\textgreater$ 0 holds.\\
+$\textit{A}$ and $\mu_A$(\textit{x}) $\textgreater$ 0 holds. In other words,
+support is a set of elements that have a non-zero membership.\\
 
 \textbf{$\alpha$-cut:} An $\alpha$-cut of $\textit{A}$ is the subset of elements
 with a membership degree greater than or equal to $\alpha$. The $\alpha$-cut is
@@ -352,47 +385,91 @@ The concept of membership function discussed in Section
 \ref{sec:membership-function} allows us to define fuzzy systems in natural
 language. Linguistic variables are the input or output variables of the system
 whose values are words or sentences from a natural language, instead of
-numerical values. A linguistic variable is generally decomposed into a set of
-linguistic terms. For instance, for people's age, we usually use terms such
-as ``old'' or ``young'' which are called linguistic values of the age. Then, we
-can consider a set of decompositions for the linguistic variable age,
+numerical values. In fact, just like an algebraic variable takes numbers as
+values, a linguistic variable takes words or sentences as values
+\cite{zimmermann:fuzzy-sets}. A linguistic variable is generally decomposed into
+a set of linguistic terms. For instance, for people's age, we usually use terms
+such as ``old'' or ``young'' which are called linguistic values of the age.
+Then, we can consider a set of decompositions for the linguistic variable age,
 \textit{Height}(\textit{h}) = {very-old, old, mature, young, very-young}. The
-members of this decomposition set are called linguistic terms which can cover a
-portion of the overall values of people's age.
+members of this decomposition set are called \textit{linguistic terms} which can
+cover a portion of the overall values of people's age. In other words, the
+values that a linguistic variable can take is called its linguistic terms.
 
 \subsubsection{Fuzzy Operators}
 
-In order to easily manipulate fuzzy sets, we are redefining the operators of the
-classical set theory to fit the specific membership functions of fuzzy logic for
-values strictly between 0 and 1.
-
-Unlike the definitions of the properties of fuzzy sets that are always the same,
-the definition of operators on fuzzy sets is chosen, like membership functions.
-Here are the two sets of operators for the complement (NOT), the intersection
-(AND) and union (OR) most commonly used:
+Fuzzy operators are used in order to manipulate fuzzy sets, and for being able
+to evaluate the constructed fuzzy rules, and ultimately to be able to combine
+the results of the individual rules. The operations on fuzzy sets are different
+than the operations on classical sets. The definitions of operators on fuzzy
+sets are not the same and can be chosen. Here are the two sets of operators for
+the complement (NOT), the intersection (AND) and union (OR) most commonly used:
 
 \subsubsection{Fuzzy Sets}
 
-A fuzzy set A is defined by a membership function $\mu_A$ from the universe of
+Fuzzy sets are a further development of the mathematical concept of a
+conventional set. A fuzzy set is a class of objects with continuum of
+degrees of membership \cite{zadeh:fuzzy}. Following Zadeh \cite{zadeh:fuzzy}
+many sets have more than an either-or criterion for membership. For insatnce,
+the set young people which can contain people at diffrent ages. A fuzzy set
+$\textit{A}$ is defined by a membership function $\mu_A$ from the universe of
 discourse $X_i$ to the closed unit interval [0,1]. We interpret
-$\mu_A$($\textit{x}$) as the degree of membership of $\textit{x}$ in
-\textit{A}.
+$\mu_A$($\textit{x}$) as the degree of membership of $\textit{x}$ in \textit{A}.
+Zadeh proposed this degree of membership, such that the transition from
+membership to non-membership is gradual rather than abrupt. Therefore, the
+degree of membership for all its members describes a fuzzy set.
 
 \subsubsection{Fuzzy Relations}
 
 \subsubsection{Fuzzy Rules}
 \label{sec:fuzzy-rules}
 
+In a Fuzzy Logic system, a rule-base is constructed to determine and control the
+output variable. Fuzzy rules are simply comprised of IF-THEN rules which include
+two parts of condition and conclusion. The followings are two examples of fuzzy
+rules based on the age example depicted in Figure
+\ref{fig:membership-function}:\\
+
+\textbf{IF} (age is \textit{young}) \textbf{THEN} run \textit{command ``talk''}
+ 
+\textbf{IF} (age is \textit{old} \textbf{OR} \textit{mature}) \textbf{THEN} run
+\textit{command ``listen''}
+
 \subsubsection{Fuzzy Propositions}
 
 \subsubsection{Fuzzification}
 \label{sec:fuzzification}
 
-\subsubsection{Reasoning in Fuzzy Logic}
+\subsubsection{Inference in Fuzzy Logic}
 \label{sec:reasoning}
+
+In order to draw conclusions from a rule-base we need a mechanism that can
+produce an output from a collection of IF-THEN rules. Meaning, after evaluating
+the result of each rule with respect to the given input value(s), the results of
+the rules should be combined to obtain a final result. This process in Fuzzy
+Logic systems is called inference. The results of individual rules can be
+combined in different ways. There are different types of accumulation methods
+that can be used to combine the results id individual rules.
 
 \subsubsection{Defuzzification}
 \label{sec:defuzzification}
+
+After the inference step, the Fuzzy Logic system provides the overall result as
+a fuzzy value. Then, to obtain a final crisp output value, this fuzzy result
+should be defuzzified which is the purpose of the defuzzifier component of a
+Fuzzy Logic system. Defuzzification is performed according to the membership
+function of the output variable. Figure \ref{fig:defuzzification} shows the
+defuzzification step of in a Fuzzy Logic system.
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.65\textwidth]{figure/defuzzification.png}
+  \caption{Defuzzification step.}
+  \label{fig:defuzzification}
+\end{figure}
+
+There are different algorithms for defuzzification step. One of the most common
+used algorithms is called called center of gravity.
 
 \subsubsection{Types of Fuzzy Functions}
 
