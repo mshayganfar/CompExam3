@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  9 JUN 2015 19:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  10 JUN 2015 14:55
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -357,28 +357,97 @@ ML/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.9
 5 (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$,
  []
 
-[5] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 311.
+[5] <figure/fuzzy-algorithm.png, id=35, 1027.84pt x 309.155pt>
+File: figure/fuzzy-algorithm.png Graphic file (type png)
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+<use figure/fuzzy-algorithm.png>
+Package pdftex.def Info: figure/fuzzy-algorithm.png used on input line 261.
+(pdftex.def)             Requested size: 341.9989pt x 102.86586pt.
+
+<figure/membership-function.png, id=36, 1212.53pt x 868.24374pt>
+File: figure/membership-function.png Graphic file (type png)
+
+<use figure/membership-function.png>
+Package pdftex.def Info: figure/membership-function.png used on input line 281.
+
+(pdftex.def)             Requested size: 233.9978pt x 167.55144pt.
+ [6 <./figure/fuzzy-algorithm.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 300--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
+
+ []
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 314.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 314.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--320
+
+ []
+
+[7 <./figure/membership-function.png (PNG copy)>] [8]
+<figure/fuzzy-system.png, id=47, 1227.58624pt x 459.7175pt>
+File: figure/fuzzy-system.png Graphic file (type png)
+
+<use figure/fuzzy-system.png>
+Package pdftex.def Info: figure/fuzzy-system.png used on input line 384.
+(pdftex.def)             Requested size: 233.9978pt x 87.6278pt.
+ [9 <./figure/fuzzy-system.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 418.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 311.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 418.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Overfull \hbox (16.28516pt too wide) in paragraph at lines 326--331
+Overfull \hbox (16.28516pt too wide) in paragraph at lines 433--438
 [][]\OT1/cmr/m/n/10.95 Computational tractabil-ity: Be-lief net-works are com-p
 u-ta-tion-ally tractable
  []
 
-[7] [8] (./exam-shayganfar-3.bbl
+[10] [11] (./exam-shayganfar-3.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [9]
+
+! Misplaced alignment tab character &.
+l.41 \newblock Jones &
+                       Bartlett Learning, 2011.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[12]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -387,7 +456,7 @@ Missing character: There is no € in font cmti10!
 Missing character: There is no ” in font cmti10!
 
 ! Misplaced alignment tab character &.
-l.69 \newblock Springer Science &
+l.74 \newblock Springer Science &
                                   Business Media, 2001.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -396,13 +465,13 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [10] (./exam-shayganfar-3.aux) ) 
+) [13] (./exam-shayganfar-3.aux) ) 
 Here is how much of TeX's memory you used:
- 3001 strings out of 495028
- 42003 string characters out of 6181497
- 100463 words of memory out of 5000000
- 6157 multiletter control sequences out of 15000+600000
- 13802 words of font info for 52 fonts, out of 8000000 for 9000
+ 3028 strings out of 495028
+ 42668 string characters out of 6181497
+ 100552 words of memory out of 5000000
+ 6180 multiletter control sequences out of 15000+600000
+ 14503 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,26p,249b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/pu
@@ -421,10 +490,10 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb>
-Output written on exam-shayganfar-3.pdf (10 pages, 236156 bytes).
+Output written on exam-shayganfar-3.pdf (13 pages, 424152 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
