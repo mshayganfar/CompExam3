@@ -58,4 +58,14 @@ Ronald~R. Yager.
 \newblock On the dempster–shafer framework and new combination rules.
 \newblock {\em Information Science}, 41(2):93--137, 1987.
 
+\bibitem{zadeh:fuzzy}
+Lotfi~A. Zadeh.
+\newblock Fuzzy sets.
+\newblock {\em Information and Control}, 8(3):338--353, 1965.
+
+\bibitem{zimmermann:fuzzy-sets}
+Hans-J\"urgen Zimmermann.
+\newblock {\em Fuzzy Set Theory — and Its Applications}.
+\newblock Springer Science & Business Media, 2001.
+
 \end{thebibliography}
