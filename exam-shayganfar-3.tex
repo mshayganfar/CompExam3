@@ -263,15 +263,29 @@ modeled in different ways.
   \label{fig:fuzzy-algorithm}
 \end{figure}
 
+Figure \ref{fig:fuzzy-algorithm} shows the Fuzzy Logic algorithm. It begins
+with initialization of linguistic varibales (see Section
+\ref{sec:linguistic-variables}) and constructing appropriate membership
+functions (see Section \ref{sec:membership-function}) and rule-base of the
+fuzzy system (see Section \ref{sec:fuzzy-rules}). The constructed membership
+functions transfer the input data to fuzzy values (see Section
+\ref{sec:fuzzification}). Then, the inference system evaluates the constructed
+rules with respect to the given input value, and merges the results obtained
+from each rule. Finally, the ovelall result will be transfered to a non-fuzzy
+(scalar) value (see Section \ref{sec:defuzzification}).
+
 \subsubsection{Membership Functions}
 \label{sec:membership-function}
 
 The difference between crisp (i.e., classical) and fuzzy sets is established by
 introducing a \textit{membership function}. Membership functions are
 mathematical tools for indicating flexible membership to a set, modeling and
-quantifying the meaning of symbols. Membership functions characterize both fuzzy
-and crisp sets. Therefore, the manipulation of fuzzy quantities can be
-accomplished by manipulation of fuzzy set membership functions. The manipulation
+quantifying the meaning of symbols. Membership functions are used in the
+fuzzification and defuzzification steps (see Sections \ref{sec:fuzzification}
+and \ref{sec:defuzzification}) of a Fuzzy Logic system. A membership function is
+used to quantify a linguistic term (see Section \ref{sec:linguistic-variables}).
+Therefore, the manipulation of fuzzy quantities can be accomplished by
+manipulation of fuzzy set membership functions. Some of the manipulation
 includes set complement, intersection, and union as well as fuzzification and
 defuzzification (see Sections \ref{sec:fuzzification} and
 \ref{sec:defuzzification}) \cite{schalkoff:intelligent-systems}.
@@ -283,14 +297,18 @@ defuzzification (see Sections \ref{sec:fuzzification} and
   \label{fig:membership-function}
 \end{figure}
 
-Figure \ref{fig:membership-function} shows three examples of a membership
-function in the interval 0 to 70 years. These three functions define the degree
-of membership of any given age in the sets of young, adult, and old ages. For
-insatnce, if someone is 20 years old her degree of membership in the set of
-young persons is 1.0 (maximum value), in the set of adults 0.35, and in the set
-of old persons 0.0 (minimum value). As another example, if someone is 50 years
-old the degrees of membership in the sets of young, mature, and old are 0.0,
-1.0, 0.3 respectively.
+Figure \ref{fig:membership-function} shows membership functions for three
+linguistic terms of age variable. It shows three examples of a membership
+functions in the interval 0 to 70 years. These three functions define the degree
+of membership of any given age in the sets of young, mature, and old ages.
+Note that, an important characteristic of fuzzy logic is that a numerical value
+does not have to be fuzzified using only one membership function. In other
+words, a value can belong to multiple sets at the same time. For insatnce, if
+someone is 20 years old her degree of membership in the set of young persons is
+1.0 (maximum value), in the set of adults 0.35, and in the set of old persons
+0.0 (minimum value). As another example, if someone is 50 years old the degrees
+of membership in the sets of young, mature, and old are 0.0, 1.0, 0.3
+respectively.
 
 The membership function is a graphical representation of the magnitude of
 participation of each input. It associates a weighting with each of the inputs
@@ -330,8 +348,17 @@ their influence on the fuzzy output sets of the final output conclusion.
 \subsubsection{Linguistic Variables}
 \label{sec:linguistic-variables}
 
-The concept of membership function discussed above allows us to define fuzzy
-systems in natural language.
+The concept of membership function discussed in Section
+\ref{sec:membership-function} allows us to define fuzzy systems in natural
+language. Linguistic variables are the input or output variables of the system
+whose values are words or sentences from a natural language, instead of
+numerical values. A linguistic variable is generally decomposed into a set of
+linguistic terms. For instance, for people's age, we usually use terms such
+as ``old'' or ``young'' which are called linguistic values of the age. Then, we
+can consider a set of decompositions for the linguistic variable age,
+\textit{Height}(\textit{h}) = {very-old, old, mature, young, very-young}. The
+members of this decomposition set are called linguistic terms which can cover a
+portion of the overall values of people's age.
 
 \subsubsection{Fuzzy Operators}
 
@@ -354,6 +381,7 @@ $\mu_A$($\textit{x}$) as the degree of membership of $\textit{x}$ in
 \subsubsection{Fuzzy Relations}
 
 \subsubsection{Fuzzy Rules}
+\label{sec:fuzzy-rules}
 
 \subsubsection{Fuzzy Propositions}
 
@@ -381,7 +409,7 @@ defuzzification step (see Section \ref{sec:defuzzification}).
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.65\textwidth]{figure/fuzzy-system.png}
+  \includegraphics[width=0.85\textwidth]{figure/fuzzy-system.png}
   \caption{A Fuzzy Logic system.}
   \label{fig:fuzzy-system}
 \end{figure}
