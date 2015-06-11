@@ -63,6 +63,12 @@ Ronald~R. Yager.
 \newblock On the dempster–shafer framework and new combination rules.
 \newblock {\em Information Science}, 41(2):93--137, 1987.
 
+\bibitem{yager:generalizing-leximin}
+Ronald~R. Yager, Carol~L. Walker, and Elbert~A. Walker.
+\newblock Generalizing leximin to t-norms and t-conorms: the lexit and lexis
+  orderings.
+\newblock {\em Fuzzy Sets and Systems}, 151(2):327--340, 2005.
+
 \bibitem{zadeh:fuzzy}
 Lotfi~A. Zadeh.
 \newblock Fuzzy sets.

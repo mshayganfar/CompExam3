@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  10 JUN 2015 18:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  10 JUN 2015 20:09
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -361,74 +361,120 @@ ML/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.9
 File: figure/fuzzy-algorithm.png Graphic file (type png)
 
 <use figure/fuzzy-algorithm.png>
-Package pdftex.def Info: figure/fuzzy-algorithm.png used on input line 261.
+Package pdftex.def Info: figure/fuzzy-algorithm.png used on input line 264.
 (pdftex.def)             Requested size: 341.9989pt x 102.86586pt.
-
-<figure/prob-poss-01.png, id=36, 940.51375pt x 137.51375pt>
+ [6 <./figure/fuzzy-algorithm.png (PNG copy)>]
+<figure/prob-poss-01.png, id=39, 940.51375pt x 137.51375pt>
 File: figure/prob-poss-01.png Graphic file (type png)
 
 <use figure/prob-poss-01.png>
-Package pdftex.def Info: figure/prob-poss-01.png used on input line 289.
+Package pdftex.def Info: figure/prob-poss-01.png used on input line 293.
 (pdftex.def)             Requested size: 233.9978pt x 34.21259pt.
 
-<figure/prob-poss-02.png, id=37, 949.5475pt x 146.5475pt>
+<figure/prob-poss-02.png, id=40, 949.5475pt x 146.5475pt>
 File: figure/prob-poss-02.png Graphic file (type png)
 
 <use figure/prob-poss-02.png>
-Package pdftex.def Info: figure/prob-poss-02.png used on input line 298.
+Package pdftex.def Info: figure/prob-poss-02.png used on input line 302.
 (pdftex.def)             Requested size: 233.9978pt x 36.11351pt.
- [6 <./figure/fuzzy-algorithm.png (PNG copy)>]
+
 <figure/membership-function.png, id=41, 1212.53pt x 868.24374pt>
 File: figure/membership-function.png Graphic file (type png)
 
 <use figure/membership-function.png>
-Package pdftex.def Info: figure/membership-function.png used on input line 326.
+Package pdftex.def Info: figure/membership-function.png used on input line 330.
 
 (pdftex.def)             Requested size: 233.9978pt x 167.55144pt.
  [7 <./figure/prob-poss-01.png (PNG copy)> <./figure/prob-poss-02.png (PNG copy
-)> <./figure/membership-function.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 349--356
+)>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--365
 
  []
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 364.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 364.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--366
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--371
+Underfull \hbox (badness 10000) in paragraph at lines 366--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--371
-
- []
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 427--432
+Underfull \hbox (badness 10000) in paragraph at lines 371--375
 
  []
 
 
-LaTeX Warning: File `figure/defuzzification.png' not found on input line 466.
+Underfull \hbox (badness 10000) in paragraph at lines 371--375
+
+ []
+
+[8 <./figure/membership-function.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 405--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--463
+
+ []
+
+[10]
+
+LaTeX Warning: File `figure/defuzzification.png' not found on input line 499.
 
 
 ! Package pdftex.def Error: File `figure/defuzzification.png' not found.
@@ -437,41 +483,42 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.466 ...65\textwidth]{figure/defuzzification.png}
+l.499 ...65\textwidth]{figure/defuzzification.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[10] <figure/fuzzy-system.png, id=55, 1227.58624pt x 459.7175pt>
+<figure/fuzzy-system.png, id=55, 1227.58624pt x 459.7175pt>
 File: figure/fuzzy-system.png Graphic file (type png)
 
 <use figure/fuzzy-system.png>
-Package pdftex.def Info: figure/fuzzy-system.png used on input line 489.
+Package pdftex.def Info: figure/fuzzy-system.png used on input line 520.
 (pdftex.def)             Requested size: 306.0022pt x 114.59238pt.
  [11]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 523.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 554.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 523.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 554.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [12 <./figure/fuzzy-system.png (PNG copy)>]
-Overfull \hbox (16.28516pt too wide) in paragraph at lines 538--543
+ [12]
+Overfull \hbox (16.28516pt too wide) in paragraph at lines 569--574
 [][]\OT1/cmr/m/n/10.95 Computational tractabil-ity: Be-lief net-works are com-p
 u-ta-tion-ally tractable
  []
 
-[13] (./exam-shayganfar-3.bbl
+[13 <./figure/fuzzy-system.png (PNG copy)>] [14] (./exam-shayganfar-3.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [14]
+
+[15]
 ! Misplaced alignment tab character &.
 l.41 \newblock Jones &
                        Bartlett Learning, 2011.
@@ -485,13 +532,11 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-[15]
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ” in font cmti10!
-
 ! Misplaced alignment tab character &.
-l.74 \newblock Springer Science &
+l.80 \newblock Springer Science &
                                   Business Media, 2001.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -502,10 +547,10 @@ might try typing `S' now just to see what is salvageable.
 
 ) [16] (./exam-shayganfar-3.aux) ) 
 Here is how much of TeX's memory you used:
- 3045 strings out of 495028
- 43033 string characters out of 6181497
- 100603 words of memory out of 5000000
- 6193 multiletter control sequences out of 15000+600000
+ 3046 strings out of 495028
+ 43061 string characters out of 6181497
+ 101605 words of memory out of 5000000
+ 6194 multiletter control sequences out of 15000+600000
  14671 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,26p,249b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -526,7 +571,7 @@ fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb>
-Output written on exam-shayganfar-3.pdf (16 pages, 468583 bytes).
+Output written on exam-shayganfar-3.pdf (16 pages, 470389 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream

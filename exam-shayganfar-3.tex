@@ -237,14 +237,17 @@ measure of conflict between the sources
 \subsection{Fuzzy Logic Theory}
 
 Fuzzy Logic provides a mathematical framework to capture uncertainty, and it was
-introduced by Zadeh in 1965 \cite{zadeh:fuzzy}. Basically, Fuzzy Logic is a
-multivalued logic, that allows intermediate values to be defined between
+introduced by Zadeh in 1965 \cite{zadeh:fuzzy}. There are different kinds of
+uncertainties in the real world. For instance, randomness is one kind, which is
+typically modeled using probability theory. Fuzziness manipulates uncertainty by
+dealing with the boundaries of a set that are not clearly defined. Fuzzy Logic
+is a multivalued logic, that allows intermediate values to be defined between
 conventional evaluations like ``true'' and ``false''. Fuzzy Logic's ultimate
 goal is to provide foundations for approximate reasoning using imprecise
 propositions based on fuzzy set theory. In order to deal with such imprecise
-inference, Fuzzy Logic allows the imprecise linguistic terms such as: fuzzy
-predicates (e.g., old, expensive), fuzzy quantifiers (e.g., many, little), and
-fuzzy truth values (e.g., unlikely false or unlikely true). Fuzzy Logic is a
+inference, Fuzzy Logic allows the imprecise linguistic terms such as:
+fuzzy predicates (e.g., old, expensive), fuzzy quantifiers (e.g., many, little),
+and fuzzy truth values (e.g., unlikely false or unlikely true). Fuzzy Logic is a
 method for reasoning with logical expressions describing membership in fuzzy
 sets \cite{russell:ai-modern}. Logics as bases for reasoning can be
 distinguished essentially by three items: truth values, operators, and reasoning
@@ -276,13 +279,14 @@ from each rule. Finally, the ovelall result will be transfered to a non-fuzzy
 
 \subsubsection{Probability vs Possibility}
 
-Based on the Fuzzy Logic theory of Zadeh \cite{zadeh:fuzzy} there is a
-difference between possibility of an event happening and the probability of
-that. The follwing example by Zimmermann in \cite{zimmermann:fuzzy-sets} shows
-the differnce. Consider the statement ``Hans ate \textit{X} eggs for
-breakfast'', where \textit{X} $\in$ \textit{U} = {1, 2, \ldots, 8}. We may
-associate a probability \textit{p} by observing \textit{Hans} eating breakfast
-for 100 days,
+The theory of possibility is analogous and yet conceptually different from the
+theory of probability. Based on the Fuzzy Logic theory of Zadeh
+\cite{zadeh:fuzzy} there is a difference between possibility of an event
+happening and the probability of that. The follwing example by Zimmermann in
+\cite{zimmermann:fuzzy-sets} shows the differnce. Consider the statement ``Hans
+ate \textit{X} eggs for breakfast'', where \textit{X} $\in$ \textit{U} = $\{1,
+2, \ldots, 8\}$. We may associate a probability \textit{p} by observing
+\textit{Hans} eating breakfast for 100 days,
 
 \begin{figure}[tbh]
   \center
@@ -402,8 +406,29 @@ Fuzzy operators are used in order to manipulate fuzzy sets, and for being able
 to evaluate the constructed fuzzy rules, and ultimately to be able to combine
 the results of the individual rules. The operations on fuzzy sets are different
 than the operations on classical sets. The definitions of operators on fuzzy
-sets are not the same and can be chosen. Here are the two sets of operators for
-the complement (NOT), the intersection (AND) and union (OR) most commonly used:
+sets are not the same and can be chosen. Zadeh in \cite{zadeh:fuzzy} defined the
+intersection (logical and), union (exclusive or), and complement (negation)
+operations for fuzzy sets as generalization of crisp sets and of crisp
+statements. Here are the two sets of operators for the complement (NOT), the
+intersection (AND) and union (OR) most commonly used:\\
+
+\noindent The memebership function of the \textbf{Intersection} of two fuzzy
+sets \textit{A} and \textit{B}:\\
+
+$\mu_{A \cap B}(X)$ = Min($\mu_{A}(X), \mu_{B}(X)$) $\qquad \forall x \in X$\\
+
+\noindent The memebership function of the \textbf{union} of two fuzzy sets
+\textit{A} and \textit{B}:\\
+
+$\mu_{A \cup B}(X)$ = Max($\mu_{A}(X), \mu_{B}(X)$) $\qquad \forall x \in X$\\
+
+\noindent The memebership function of the \textbf{complement} of a fuzzy set
+\textit{A}:\\
+
+$\mu_{A}(X)$ = 1 - $\mu_{A}(X) \qquad \forall x \in X$\\
+
+\noindent These definitions were later extended by other reasearchers too, e.g.,
+\cite{yager:generalizing-leximin}.
 
 \subsubsection{Fuzzy Sets}
 
@@ -419,26 +444,34 @@ Zadeh proposed this degree of membership, such that the transition from
 membership to non-membership is gradual rather than abrupt. Therefore, the
 degree of membership for all its members describes a fuzzy set.
 
-\subsubsection{Fuzzy Relations}
-
 \subsubsection{Fuzzy Rules}
 \label{sec:fuzzy-rules}
 
 In a Fuzzy Logic system, a rule-base is constructed to determine and control the
 output variable. Fuzzy rules are simply comprised of IF-THEN rules which include
-two parts of condition and conclusion. The followings are two examples of fuzzy
+two parts of condition and conclusion. A fuzzy rule is encoded in a statement in
+the following form:\\
+
+\noindent \textbf{IF} (a statement of conditions is satisfied)
+
+$\qquad\qquad\qquad\qquad\qquad$\textbf{THEN} (a set of consequences can
+be inferred).\\
+
+The followings are two examples of fuzzy
 rules based on the age example depicted in Figure
 \ref{fig:membership-function}:\\
 
-\textbf{IF} (age is \textit{young}) \textbf{THEN} run \textit{command ``talk''}
+\textbf{IF} (age is \textit{young}) \textbf{THEN} (run \textit{command
+``talk''})
  
-\textbf{IF} (age is \textit{old} \textbf{OR} \textit{mature}) \textbf{THEN} run
-\textit{command ``listen''}
-
-\subsubsection{Fuzzy Propositions}
+\textbf{IF} (age is \textit{old} \textbf{OR} \textit{mature}) \textbf{THEN} (run
+\textit{command ``listen''})
 
 \subsubsection{Fuzzification}
 \label{sec:fuzzification}
+
+The fuzzification process is mainly used to transform a crisp set to a fuzzy
+set. A fuzzifier function F is used to control the fuzziness of the set.
 
 \subsubsection{Inference in Fuzzy Logic}
 \label{sec:reasoning}
@@ -470,8 +503,6 @@ defuzzification step of in a Fuzzy Logic system.
 
 There are different algorithms for defuzzification step. One of the most common
 used algorithms is called called center of gravity.
-
-\subsubsection{Types of Fuzzy Functions}
 
 In summary, Figure \ref{fig:fuzzy-system} (see also Figure
 \ref{fig:fuzzy-algorithm}) shows the process of fuzzy logic. Firstly, a crisp
