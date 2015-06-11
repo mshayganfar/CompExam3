@@ -36,15 +36,48 @@
 
 \subsection{Bayesian Belief Networks}
 
+Problems with a large number of variables require maintaining large joint
+distributions to compute posterior probabilities based on evidence.
+
+Constructing a belief network can be divided into two different subtasks: a)
+specifying the causal structure among the existing variables in the netwrok, and
+b) specifying the prior and conditional probabilies for these variables.
+
+A \textit{Bayesian Belief Network} is graph consisting of nodes and edges which
+provides a graphical model for reasoning under uncertainty. Each node in the
+network represents a random variable from the domain. The state of each node is
+called \textit{belief} which based on the prior evidence reflects the posterior
+probability distribution of the other values associted with that node. Each
+individual edge between two variables represents the relation or conditional
+dependence between those two variables. It also has an associated
+\textit{Conditional Probability Table} (CPT) which quantifies the relation
+associated with the edge. Also, the explicit directions represented by arrows as
+directinoal edges are the notion of the causality in the network, and they are
+always drawn from cause nodes to effect nodes, indicating dependencies between
+variables \cite{das:decision-making-agents}. Assuming discrete variables, the
+strength of the relationship between variables is quantified by conditional
+probability distributions associated with each node.
+
+\subsubsection{Nodes and Values}
+
+\subsubsection{Network's Structure}
+
 \subsubsection{Conditional Probability Table}
 
-\subsubsection{Joint Probability Distribution}
+The probabilities in a CPT are typically acquired from experts of the subject,
+but they can also be learned automatically using machine learning approaches.
 
-\subsubsection{Conditional Independence}
+\subsubsection{Markov Property}
+
+\subsubsection{Joint Probability Distribution}
 
 \subsubsection{Types of Reasoning}
 
 \subsubsection{Probability Theory}
+
+\subsubsection{Conditional Independence}
+
+\subsubsection{d-Separation}
 
 \subsection{Dempster-Shafer Theory}
 
