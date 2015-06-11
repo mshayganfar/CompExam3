@@ -236,8 +236,8 @@ measure of conflict between the sources
 
 \subsection{Fuzzy Logic Theory}
 
-Fuzzy Logic provides a mathematical framework to capture uncertainty, and it was
-introduced by Zadeh in 1965 \cite{zadeh:fuzzy}. There are different kinds of
+Fuzzy Logic, introduced by Zadeh in 1965 \cite{zadeh:fuzzy}, provides a
+mathematical framework to capture uncertainty. There are different kinds of
 uncertainties in the real world. For instance, randomness is one kind, which is
 typically modeled using probability theory. Fuzziness manipulates uncertainty by
 dealing with the boundaries of a set that are not clearly defined. Fuzzy Logic
@@ -256,8 +256,8 @@ dual logic, truth values can be ``true'' (1) or ``false'' (0), operators can be
 defined using the truth tables, and modus ponens or contrapositions can be
 considered as tautology. In Fuzzy Logic, the truth values are no longer
 restricted to two values, but are expressed by the linguistic variables such as
-``true" or ``false". In all forms of fuzzy reasoning, the implications can be
-modeled in different ways.
+and including ``true" or ``false". In all forms of fuzzy reasoning, the
+implications can be modeled in different ways.
 
 \begin{figure}[tbh]
   \center
@@ -271,11 +271,11 @@ with initialization of linguistic varibales (see Section
 \ref{sec:linguistic-variables}) and constructing appropriate membership
 functions (see Section \ref{sec:membership-function}) and rule-base of the
 fuzzy system (see Section \ref{sec:fuzzy-rules}). The constructed membership
-functions transfer the input data to fuzzy values (see Section
+functions transform the input data to fuzzy values (see Section
 \ref{sec:fuzzification}). Then, the inference system evaluates the constructed
 rules with respect to the given input value, and merges the results obtained
-from each rule. Finally, the ovelall result will be transfered to a non-fuzzy
-(scalar) value (see Section \ref{sec:defuzzification}).
+from each rule. Finally, the ovelall result will be transformed to a non-fuzzy
+(crisp) value (see Section \ref{sec:defuzzification}).
 
 \subsubsection{Probability vs Possibility}
 
@@ -304,16 +304,17 @@ in breakfast may be the following possibilty distribution $\pi$,
 \end{figure}
 
 where the possiibility of \textit{X} = 3 is 1, while the probability of
-\textit{Hnas} eating 3 eggs for breakfast is only 0.1. Therefore, the example
-shows, that a possible event does not necessarily imply that it is probable too.
+\textit{Hans} eating 3 eggs for breakfast is only 0.1. Therefore, as the example
+shows, a possible event does not necessarily imply that it is probable too.
 However, if the event is probable it must also be possible
 \cite{zimmermann:fuzzy-sets}.
 
 \subsubsection{Membership Functions}
 \label{sec:membership-function}
 
-The difference between crisp (i.e., classical) and fuzzy sets is established by
-introducing a \textit{membership function}. Membership functions are
+\textit{Membership functions} are the crucial part of the Fuzzy Logic theory. In
+fact, the difference between crisp (i.e., classical) and fuzzy sets is
+established by introducing membership functions. Membership functions are
 mathematical tools for indicating flexible membership to a set, modeling and
 quantifying the meaning of symbols. Membership functions are used in the
 fuzzification and defuzzification steps (see Sections \ref{sec:fuzzification}
@@ -332,31 +333,30 @@ defuzzification (see Sections \ref{sec:fuzzification} and
   \label{fig:membership-function}
 \end{figure}
 
+Let $\mathcal{X}$ be a crisp universal set. A fuzzy subset $\textit{A}$ of
+$\mathcal{X}$ is characterized by a membership function; $\mu_A$ : $\mathcal{X}
+\rightarrow$ [0, 1]. $\mu_A$($\textit{x}$) is called the \textit{membership
+degree (grade)} of $\textit{x}$ in $\textit{A}$. The degree of membership is
+expressed by a real number in the interval [0, 1]. The degree of membership is a
+precise, but subjective measure that depends on the context.
+
 Figure \ref{fig:membership-function} shows membership functions for three
-linguistic terms of age variable. It shows three examples of a membership
+linguistic terms of age variable (see also Section
+\ref{sec:linguistic-variables}). It shows three examples of a membership
 functions in the interval 0 to 70 years. These three functions define the degree
-of membership of any given age in the sets of young, mature, and old ages.
-Note that, an important characteristic of fuzzy logic is that a numerical value
-does not have to be fuzzified using only one membership function. In other
-words, a value can belong to multiple sets at the same time. For insatnce, if
-someone is 20 years old her degree of membership in the set of young persons is
-1.0 (maximum value), in the set of adults 0.35, and in the set of old persons
-0.0 (minimum value). As another example, if someone is 50 years old the degrees
-of membership in the sets of young, mature, and old are 0.0, 1.0, 0.3
-respectively.
+of membership of any given age in the sets of young, mature, and old ages. Note
+that, an important characteristic of fuzzy logic is that a numerical value does
+not have to be fuzzified using only one membership function. In other words, a
+value can belong to multiple sets at the same time. For instance, if someone is
+20 years old her degree of membership in the set of young persons is 1.0
+(maximum value), in the set of matures 0.35, and in the set of old persons 0.0
+(minimum value). As another example, if someone is 50 years old the degrees of
+membership in the sets of young, mature, and old are 0.0, 1.0, 0.3 respectively.
 
-The membership function is a graphical representation of the magnitude of
-participation of each input. It associates a weighting with each of the inputs
-that are processed, define functional overlap between inputs, and ultimately
-determines an output response.
-
-Let $\mathcal{X}$ be a classical universal set. A fuzzy subset $\textit{A}$ of
-$\mathcal{X}$ is characterized by a \textit{membership function}: $\mu_A$ :
-$\mathcal{X} \rightarrow$ [0, 1]. $\mu_A$($\textit{x}$) is called the
-\textit{membership degree (grade)} of $\textit{x}$ in $\textit{A}$. The degree
-of membership is expressed by a real number in the interval [0, 1]. The degree
-of membership is a precise, but subjective measure that depends on the context.
-The followings define some of the important properties of membership function.\\
+Membership functions can have different shapes and their shape can be determined
+arbitrarilty based on experience or sometimes by running statistical studies on
+data. They can be sigmoidal, heyperbolic, Gaussian or any other shape. The
+followings define some of the important properties of membership function.\\
 
 \textbf{Height:} The height of $\textit{A}$, denoted by
 $\textit{h}$($\textit{A}$), corresponds to the upper bound of the membership
@@ -374,13 +374,6 @@ denoted by:\\ \\$\alpha$-cut($\textit{A}$) = $\{\textit{x} \in \mathcal{X} |
 \mu_A(\textit{x}) \geqslant \alpha\}$.\\
 
 \textbf{kernel:}
-
-Membership functions can have different shapes and their shape can be determined
-arbitrarilty based on experience or by running statistical studies on data.
-They can be sigmoidal, heyperbolic, Gaussian or any other shape.
-
-The rules use the input membership values as weighting factors to determine
-their influence on the fuzzy output sets of the final output conclusion.
 
 \subsubsection{Linguistic Variables}
 \label{sec:linguistic-variables}
@@ -467,22 +460,36 @@ rules based on the age example depicted in Figure
 \textbf{IF} (age is \textit{old} \textbf{OR} \textit{mature}) \textbf{THEN} (run
 \textit{command ``listen''})
 
+The rules use the input membership values as weighting factors to determine
+their influence on the fuzzy output sets of the final output conclusion.
+
 \subsubsection{Fuzzification}
 \label{sec:fuzzification}
 
-The fuzzification process is mainly used to transform a crisp set to a fuzzy
-set. A fuzzifier function F is used to control the fuzziness of the set.
+For mapping the crisp values to fuzzy ones, we need to evaluate their membership
+degree using membership functions (see Seciton \ref{sec:membership-function}).
+This process is called fuzzification and it helps us to get one fuzzy value for
+each crisp input. Thereforem the fuzzification process is mainly used to
+transform a crisp set to a fuzzy set. A fuzzifier function F is used to control
+the fuzziness of the set.
 
-\subsubsection{Inference in Fuzzy Logic}
+\subsubsection{Reasoning in Fuzzy Logic}
 \label{sec:reasoning}
 
 In order to draw conclusions from a rule-base we need a mechanism that can
 produce an output from a collection of IF-THEN rules. Meaning, after evaluating
 the result of each rule with respect to the given input value(s), the results of
 the rules should be combined to obtain a final result. This process in Fuzzy
-Logic systems is called inference. The results of individual rules can be
-combined in different ways. There are different types of accumulation methods
-that can be used to combine the results id individual rules.
+Logic systems is called reasoning. Fuzzy reasoning includes two distinct parts:
+evaluating the IF part of the rule and applying the result to the consequent
+(the THEN part of the rule). In fuzzy systems the evaluation is slightly
+different than the classical rule-based systems. In fuzzy systems the IF part of
+the rule is a fuzzy statement which means all the rules fire at some extent. If
+the IF part of the rule is true in some degree of membership, then the
+consequent is also true in some degree. It is noteworthy to mention that the
+results of individual rules can be combined in different ways. There are
+different types of accumulation methods that can be used to combine the results
+in individual rules.
 
 \subsubsection{Defuzzification}
 \label{sec:defuzzification}
@@ -492,21 +499,33 @@ a fuzzy value. Then, to obtain a final crisp output value, this fuzzy result
 should be defuzzified which is the purpose of the defuzzifier component of a
 Fuzzy Logic system. Defuzzification is performed according to the membership
 function of the output variable. Figure \ref{fig:defuzzification} shows the
-defuzzification step of in a Fuzzy Logic system.
+defuzzification step in a Fuzzy Logic system.
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.65\textwidth]{figure/defuzzification.png}
-  \caption{Defuzzification step.}
+  \includegraphics[width=0.55\textwidth]{figure/cog.png}
+  \caption{Defuzzification using Center of Gravity (COG) method
+  \cite{antonio:cog-defuzzification}.}
   \label{fig:defuzzification}
 \end{figure}
 
-There are different algorithms for defuzzification step. One of the most common
-used algorithms is called called center of gravity.
+There are different algorithms for defuzzification step. One of the most
+widely used algorithms is called \textit{centeroid}, or \textit{Center of
+Area}, or \textit{Center of Gravity} (COG). This method computes the center of
+area of the region under the curve deÞned by a fuzzy set. In this method, the
+defuzziÞed values tend to move smoothly in reaction to small changes, and it is
+relatively easy to compute. In the following formula, \textit{A} is the fuzzy
+set in question and $z_{_{COG}}$ is the final single output which in this case
+is obtained by COG method:\\
+
+\begin{center}
+$z_{_{COG}} = \frac{\sum\limits_{i=1}^{n} \mu_A(z_i).z_j}{\sum\limits_{i=1}^{n}
+\mu_A(z_i)}$
+\end{center}
 
 In summary, Figure \ref{fig:fuzzy-system} (see also Figure
-\ref{fig:fuzzy-algorithm}) shows the process of fuzzy logic. Firstly, a crisp
-set of input data are gathered and converted to a fuzzy set using fuzzy
+\ref{fig:fuzzy-algorithm}) generally shows the process of fuzzy logic. Firstly,
+a crisp set of input data are gathered and converted to a fuzzy set using fuzzy
 linguistic variables (see Section \ref{sec:linguistic-variables}), fuzzy
 linguistic terms and membership functions (see Section
 \ref{sec:membership-function}). This step is known as fuzzification (see

@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{antonio:cog-defuzzification}
+Antonio Claudio~Marques Afonso, Andre~Maciel Netto, and Wagner~Estaquio
+  de~Vasconcelos.
+\newblock Fuzzy logic applied to the modeling of water dynamics in an oxisol in
+  northeastern brazil.
+\newblock {\em Revista Brasileira de Ciencia do Solo}, 38(2):454--463, 2014.
+
 \bibitem{beynon:dst-alternative-decision}
 Malcolm Beynon, Bruce Curry, and Peter Morgan.
 \newblock The dempster–shafer theory of evidence: an alternative approach to
