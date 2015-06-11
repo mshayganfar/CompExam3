@@ -309,6 +309,21 @@ shows, a possible event does not necessarily imply that it is probable too.
 However, if the event is probable it must also be possible
 \cite{zimmermann:fuzzy-sets}.
 
+\subsubsection{Fuzzy Sets}
+
+Fuzzy sets are a further development of the mathematical concept of a
+conventional or crisp sets. A fuzzy set is a class of objects with continuum of
+degrees of membership \cite{zadeh:fuzzy}. Following Zadeh \cite{zadeh:fuzzy}
+many sets have more than an either-or criterion for membership. For insatnce,
+the set young people which can contain people at diffrent ages. A fuzzy set
+$\textit{A}$ is defined by a membership function $\mu_A$ from the universe of
+discourse $\mathcal{X}$ to the closed unit interval [0,1]. We interpret
+$\mu_A$($\textit{x}$) as the degree of membership of $\textit{x}$ in \textit{A}
+(see Section \ref{sec:membership-function}). Zadeh proposed this degree of
+membership, such that the transition from membership to non-membership is
+gradual rather than abrupt. Therefore, the degree of membership for all its
+members describes a fuzzy set.
+
 \subsubsection{Membership Functions}
 \label{sec:membership-function}
 
@@ -356,24 +371,31 @@ membership in the sets of young, mature, and old are 0.0, 1.0, 0.3 respectively.
 Membership functions can have different shapes and their shape can be determined
 arbitrarilty based on experience or sometimes by running statistical studies on
 data. They can be sigmoidal, heyperbolic, Gaussian or any other shape. The
-followings define some of the important properties of membership function.\\
+followings are some of the important properties of fuzzy sets and membership
+functions:\\
 
-\textbf{Height:} The height of $\textit{A}$, denoted by
+\textbf{Height:} The height of a fuzzy set $\textit{A}$, denoted by
 $\textit{h}$($\textit{A}$), corresponds to the upper bound of the membership
-function:\\ \\$\textit{h}$($\textit{A}$) = sup$\{\mu_A(\textit{x}) | \textit{x}
-\in \mathcal{X}\}$.\\
+function. In other words, it is the largest membership degree obtained by any
+element in that set:\\
 
-\textbf{Support:} The support of $\textit{A}$ is a set of all elements
-\textit{x} of $\mathcal{X}$ for which (\textit{x}, $\mu_A$(\textit{x})) $\in$
-$\textit{A}$ and $\mu_A$(\textit{x}) $\textgreater$ 0 holds. In other words,
-support is a set of elements that have a non-zero membership.\\
+$\textit{h}$($\textit{A}$) = sup$\{\mu_A(\textit{x}) | \textit{x} \in
+\mathcal{X}\}$.\\
 
-\textbf{$\alpha$-cut:} An $\alpha$-cut of $\textit{A}$ is the subset of elements
-with a membership degree greater than or equal to $\alpha$. The $\alpha$-cut is
-denoted by:\\ \\$\alpha$-cut($\textit{A}$) = $\{\textit{x} \in \mathcal{X} |
-\mu_A(\textit{x}) \geqslant \alpha\}$.\\
+\textbf{Support:} The support of a fuzzy set $\textit{A}$ is a set of all
+elements \textit{x} of $\mathcal{X}$ for which (\textit{x}, $\mu_A$(\textit{x}))
+$\in$ $\textit{A}$ and $\mu_A$(\textit{x}) $\textgreater$ 0 holds. In other
+words, support is a set of all elements of $\mathcal{X}$ that have non-zero
+membership degrees in $\textit{A}$.\\
 
-\textbf{kernel:}
+\textbf{$\alpha$-cut:} An $\alpha$-cut of a fuzzy set $\textit{A}$ is the subset
+of elements with a membership degree greater than or equal to $\alpha$. The
+$\alpha$-cut is denoted by:\\ \\$\alpha$-cut($\textit{A}$) = $\{\textit{x} \in
+\mathcal{X} | \mu_A(\textit{x}) \geqslant \alpha\}$.\\
+
+\textbf{core:} The core of a fuzzy set $\textit{A}$ is the crisp set that
+contains all the elements of $\mathcal{X}$ that have the membership degrees of
+\textbf{one} in $\textit{A}$.
 
 \subsubsection{Linguistic Variables}
 \label{sec:linguistic-variables}
@@ -388,7 +410,7 @@ values, a linguistic variable takes words or sentences as values
 a set of linguistic terms. For instance, for people's age, we usually use terms
 such as ``old'' or ``young'' which are called linguistic values of the age.
 Then, we can consider a set of decompositions for the linguistic variable age,
-\textit{Height}(\textit{h}) = {very-old, old, mature, young, very-young}. The
+\textit{Age}(\textit{a}) = \{very-old, old, mature, young, very-young\}. The
 members of this decomposition set are called \textit{linguistic terms} which can
 cover a portion of the overall values of people's age. In other words, the
 values that a linguistic variable can take is called its linguistic terms.
@@ -396,14 +418,15 @@ values that a linguistic variable can take is called its linguistic terms.
 \subsubsection{Fuzzy Operators}
 
 Fuzzy operators are used in order to manipulate fuzzy sets, and for being able
-to evaluate the constructed fuzzy rules, and ultimately to be able to combine
-the results of the individual rules. The operations on fuzzy sets are different
-than the operations on classical sets. The definitions of operators on fuzzy
-sets are not the same and can be chosen. Zadeh in \cite{zadeh:fuzzy} defined the
-intersection (logical and), union (exclusive or), and complement (negation)
-operations for fuzzy sets as generalization of crisp sets and of crisp
-statements. Here are the two sets of operators for the complement (NOT), the
-intersection (AND) and union (OR) most commonly used:\\
+to evaluate the constructed fuzzy rules (see Section \ref{sec:fuzzy-rules}), and
+ultimately to be able to combine the results of the individual rules. The
+operations on fuzzy sets are different than the operations on classical sets.
+The definitions of operators on fuzzy sets are not the same and can be
+arbitrarily chosen. Zadeh in \cite{zadeh:fuzzy} defined the intersection
+(logical and), union (exclusive or), and complement (negation) operations for
+fuzzy sets as generalization of crisp sets and of crisp statements. Here are the
+operators for the complement (NOT), the intersection (AND) and union (OR)
+that are most commonly used:\\
 
 \noindent The memebership function of the \textbf{Intersection} of two fuzzy
 sets \textit{A} and \textit{B}:\\
@@ -422,20 +445,6 @@ $\mu_{A}(X)$ = 1 - $\mu_{A}(X) \qquad \forall x \in X$\\
 
 \noindent These definitions were later extended by other reasearchers too, e.g.,
 \cite{yager:generalizing-leximin}.
-
-\subsubsection{Fuzzy Sets}
-
-Fuzzy sets are a further development of the mathematical concept of a
-conventional set. A fuzzy set is a class of objects with continuum of
-degrees of membership \cite{zadeh:fuzzy}. Following Zadeh \cite{zadeh:fuzzy}
-many sets have more than an either-or criterion for membership. For insatnce,
-the set young people which can contain people at diffrent ages. A fuzzy set
-$\textit{A}$ is defined by a membership function $\mu_A$ from the universe of
-discourse $X_i$ to the closed unit interval [0,1]. We interpret
-$\mu_A$($\textit{x}$) as the degree of membership of $\textit{x}$ in \textit{A}.
-Zadeh proposed this degree of membership, such that the transition from
-membership to non-membership is gradual rather than abrupt. Therefore, the
-degree of membership for all its members describes a fuzzy set.
 
 \subsubsection{Fuzzy Rules}
 \label{sec:fuzzy-rules}
@@ -458,10 +467,11 @@ rules based on the age example depicted in Figure
 ``talk''})
  
 \textbf{IF} (age is \textit{old} \textbf{OR} \textit{mature}) \textbf{THEN} (run
-\textit{command ``listen''})
+\textit{command ``listen''})\\
 
-The rules use the input membership values as weighting factors to determine
-their influence on the fuzzy output sets of the final output conclusion.
+\noindent The rules use the input membership values as weighting factors to
+determine their influence on the fuzzy output sets of the final output
+conclusion.
 
 \subsubsection{Fuzzification}
 \label{sec:fuzzification}
@@ -469,14 +479,13 @@ their influence on the fuzzy output sets of the final output conclusion.
 For mapping the crisp values to fuzzy ones, we need to evaluate their membership
 degree using membership functions (see Seciton \ref{sec:membership-function}).
 This process is called fuzzification and it helps us to get one fuzzy value for
-each crisp input. Thereforem the fuzzification process is mainly used to
-transform a crisp set to a fuzzy set. A fuzzifier function F is used to control
-the fuzziness of the set.
+each crisp input. Therefore, the fuzzification process is mainly used to
+transform a crisp set to a fuzzy set.
 
 \subsubsection{Reasoning in Fuzzy Logic}
 \label{sec:reasoning}
 
-In order to draw conclusions from a rule-base we need a mechanism that can
+In order to draw conclusions from a rule-base, we need a mechanism that can
 produce an output from a collection of IF-THEN rules. Meaning, after evaluating
 the result of each rule with respect to the given input value(s), the results of
 the rules should be combined to obtain a final result. This process in Fuzzy
@@ -494,7 +503,7 @@ in individual rules.
 \subsubsection{Defuzzification}
 \label{sec:defuzzification}
 
-After the inference step, the Fuzzy Logic system provides the overall result as
+After the reasoning step, the Fuzzy Logic system provides the overall result as
 a fuzzy value. Then, to obtain a final crisp output value, this fuzzy result
 should be defuzzified which is the purpose of the defuzzifier component of a
 Fuzzy Logic system. Defuzzification is performed according to the membership
@@ -513,9 +522,9 @@ There are different algorithms for defuzzification step. One of the most
 widely used algorithms is called \textit{centeroid}, or \textit{Center of
 Area}, or \textit{Center of Gravity} (COG). This method computes the center of
 area of the region under the curve deÞned by a fuzzy set. In this method, the
-defuzziÞed values tend to move smoothly in reaction to small changes, and it is
-relatively easy to compute. In the following formula, \textit{A} is the fuzzy
-set in question and $z_{_{COG}}$ is the final single output which in this case
+defuzzified values tend to move smoothly in reaction to small changes, and it is
+relatively easy to compute the value. In the following formula, \textit{A} is
+a fuzzy set and $z_{_{COG}}$ is the final single crisp output which in this case
 is obtained by COG method:\\
 
 \begin{center}
@@ -523,11 +532,11 @@ $z_{_{COG}} = \frac{\sum\limits_{i=1}^{n} \mu_A(z_i).z_j}{\sum\limits_{i=1}^{n}
 \mu_A(z_i)}$
 \end{center}
 
-In summary, Figure \ref{fig:fuzzy-system} (see also Figure
-\ref{fig:fuzzy-algorithm}) generally shows the process of fuzzy logic. Firstly,
-a crisp set of input data are gathered and converted to a fuzzy set using fuzzy
-linguistic variables (see Section \ref{sec:linguistic-variables}), fuzzy
-linguistic terms and membership functions (see Section
+In summary, Figure \ref{fig:fuzzy-system} (see also the fuzzy algorithm in
+Figure \ref{fig:fuzzy-algorithm}) generally shows the process of fuzzy logic.
+Firstly, a crisp set of input data are gathered and converted to a fuzzy set
+using fuzzy linguistic variables (see Section \ref{sec:linguistic-variables}),
+fuzzy linguistic terms and membership functions (see Section
 \ref{sec:membership-function}). This step is known as fuzzification (see
 Section \ref{sec:fuzzification}). Afterwards, an inference is made based on a
 set of rules (see Section \ref{sec:reasoning}). Lastly, the resulting fuzzy
@@ -536,7 +545,7 @@ defuzzification step (see Section \ref{sec:defuzzification}).
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.85\textwidth]{figure/fuzzy-system.png}
+  \includegraphics[width=0.66\textwidth]{figure/fuzzy-system.png}
   \caption{A Fuzzy Logic system.}
   \label{fig:fuzzy-system}
 \end{figure}
