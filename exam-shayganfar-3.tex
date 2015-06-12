@@ -39,20 +39,21 @@ distributions to compute posterior probabilities based on evidence.
 
 \subsection{Bayesian Belief Networks}
 
-A \textit{Bayesian Belief Network} is graph consisting of nodes and edges which
-provides a graphical model for reasoning under uncertainty. Each node in the
-network represents a random variable from the domain. The state of each node is
-called \textit{belief} which based on the prior evidence reflects the posterior
-probability distribution of the other values associted with that node. Each
+A \textit{Bayesian Belief Network} is a  directed acyclic graph consisting of
+nodes and edges which provides a graphical model for reasoning under
+uncertainty. Each node in the network represents a random variable from the
+domain. The state of each node is called \textit{belief} which based on the
+prior evidence reflects the posterior probability distribution of the other
+values associted with that node. Each node also has an associated
+\textit{Conditional Probability Table} (CPT) which represents the coniditonal
+probability of the variable given the value of its parents in the graph. Each
 individual edge between two variables represents the relation or conditional
-dependence between those two variables. It also has an associated
-\textit{Conditional Probability Table} (CPT) which quantifies the relation
-associated with the edge. Also, the explicit directions represented by arrows as
-directinoal edges are the notion of the causality in the network, and they are
-always drawn from cause nodes to effect nodes, indicating dependencies between
-variables \cite{das:decision-making-agents}. Assuming discrete variables, the
-strength of the relationship between variables is quantified by conditional
-probability distributions associated with each node.
+dependence between those two variables. Also, the explicit directions
+represented by arrows as directinoal edges are the notion of the causality in
+the network. They are always drawn from cause nodes to effect nodes, indicating
+dependencies between variables \cite{das:decision-making-agents}. Assuming
+discrete variables, the strength of the relationship between variables is
+quantified by conditional probability distributions associated with each node.
 
 Constructing a belief network can be divided into two different subtasks: a)
 specifying the causal structure among the existing variables in the netwrok, and
@@ -152,9 +153,54 @@ false | P = high , S = true) \times P(P = high) \times P(S = true)$
 
 \subsubsection{Types of Reasoning}
 
+Reasoning in Bayesian Networks is the process of updating beliefs in face of the
+evidences. In other words, it is the process of efficiently deducing the belief
+distribution over a particular subset of random variables given that we know
+the states of some other variables in the network. Bayesian Networks can be
+conditioned upon any subset of their variables, supporting any direction of
+reasoning. Figure \ref{fig:reasoning-types} shows four different types of
+reasoning using the network shown in Figure \ref{fig:bbn}. These four types are
+reasoning are \cite{korb:bayesian-ai}:\\
+
+\textbf{Diagnostic reasoning} -- This is the reasoning from symptoms (effects)
+to cause. For instance, a doctor updates her belief about a patient's cancer
+when she checks the X-ray results.
+
+\textbf{Predictive reasoning} -- This is the reasoning based on new information
+about the causes to new beliefs about the corresponding effects. For instance,
+if the patient tells his doctor the information about the polluted area he
+lives, the doctor's belief about the patient having cancer increases, even
+without assessing patient's symptoms.
+
+\textbf{Intercausal reasoning} -- This is the reasoning about the mutual causes
+of a common effect. For instance,  suppose that there are two different causes
+for lung cancer, smoking and pollution (see Figure \ref{fig:bbn}). Initially
+these two causes are independent of each other; i.e., the patient smoking or
+not, does not change the parobability of the patient being subject to pollution.
+However, as soon as the patient is diagnized with cancer, the probability of
+smoking or living in a polluted area increases. Now, if the doctor discovers
+that her patient is a smoker, then the probaility of him living in polluted area
+dicreases. Therefore, the presence of one explanatory cause for the cancer
+lowers the probability of the alternative cause, even though that they both were
+independent causes. In other words, the first explanatory cause \textit{explains
+away} the alternative one.
+
+\textbf{Combined reasoning} -- Sometimes the reaosning does not fit to one of
+the explained types. Thus, any of these reasoning types can be combined to solve
+the problem.
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.85\textwidth]{figure/reasoning-types.png}
+  \caption{Types of Reasoning \cite{korb:bayesian-ai}.}
+  \label{fig:reasoning-types}
+\end{figure}
+
 \subsubsection{Probability Theory}
 
 \subsubsection{Conditional Independence}
+
+
 
 \subsubsection{d-Separation}
 
@@ -691,6 +737,12 @@ terms of how our beliefs would change in the face of future informaiton
 gathering \cite{russell:ai-modern}.
 
 \subsection{Advantages and Disadvantages of Belief Networks}
+
+Modeling difficulites:
+
+1. specifying joint probabilities is tedious.
+
+2. Beliefs (held by human experts) are not really enforced.
 
 Like any other computational formalism, belief network technology offers certain
 advantages and disadvantages. Advantages of belief networks include

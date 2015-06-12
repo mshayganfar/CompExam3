@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  12 JUN 2015 16:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.19)  12 JUN 2015 18:08
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -241,12 +241,12 @@ e
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 86.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 86.
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -254,296 +254,310 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figure/bbn.png, id=11, 1069.9975pt x 782.925pt>
 File: figure/bbn.png Graphic file (type png)
  <use figure/bbn.png>
-Package pdftex.def Info: figure/bbn.png used on input line 94.
+Package pdftex.def Info: figure/bbn.png used on input line 95.
 (pdftex.def)             Requested size: 288.0011pt x 210.73552pt.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 [3 <./figure/bbn.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+Underfull \hbox (badness 10000) in paragraph at lines 132--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 156--164
 
  []
 
-[5]
+[4] <figure/reasoning-types.png, id=31, 1146.2825pt x 913.4125pt>
+File: figure/reasoning-types.png Graphic file (type png)
 
-LaTeX Warning: Command \textless invalid in math mode on input line 236.
+<use figure/reasoning-types.png>
+Package pdftex.def Info: figure/reasoning-types.png used on input line 194.
+(pdftex.def)             Requested size: 306.0022pt x 243.83716pt.
+ [5 <./figure/reasoning-types.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 236.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+[6]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 282.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 282.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 236.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 282.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 236.
+LaTeX Warning: Command \textless invalid in math mode on input line 282.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--246
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
 
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 259.
+Underfull \hbox (badness 10000) in paragraph at lines 290--292
+
+ []
+
+[7]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 305.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 259.
+LaTeX Warning: Command \textless invalid in math mode on input line 305.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--266
+Underfull \hbox (badness 10000) in paragraph at lines 310--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--276
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 316--322
 
  []
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 285.
+Underfull \hbox (badness 10000) in paragraph at lines 323--326
+
+ []
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 331.
 
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 285.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 331.
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 285.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--288
-
- []
+LaTeX Warning: Command \textgreater invalid in math mode on input line 331.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--291
+Underfull \hbox (badness 10000) in paragraph at lines 327--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--294
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
-<figure/uncertainty.png, id=41, 1157.32375pt x 493.845pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
+
+ []
+
+<figure/uncertainty.png, id=46, 1157.32375pt x 493.845pt>
 File: figure/uncertainty.png Graphic file (type png)
 
 <use figure/uncertainty.png>
-Package pdftex.def Info: figure/uncertainty.png used on input line 302.
+Package pdftex.def Info: figure/uncertainty.png used on input line 348.
 (pdftex.def)             Requested size: 233.9978pt x 99.84482pt.
- [7 <./figure/uncertainty.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 328--335
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 374--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
 
-Overfull \hbox (16.45282pt too wide) in paragraph at lines 347--354
+Overfull \hbox (16.45282pt too wide) in paragraph at lines 393--400
 \OT1/cmr/m/n/10.95 nom-i-na-tor in the Demp-ster's rule of com-bi-na-tion, i.e.
 , $1 \OMS/cmsy/m/n/10.95 ^^@ [] []\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.95 (\O
 ML/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.9
 5 (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$,
  []
 
-[8] <figure/fuzzy-algorithm.png, id=50, 1027.84pt x 309.155pt>
+[9 <./figure/uncertainty.png (PNG copy)>]
+<figure/fuzzy-algorithm.png, id=54, 1027.84pt x 309.155pt>
 File: figure/fuzzy-algorithm.png Graphic file (type png)
 
 <use figure/fuzzy-algorithm.png>
-Package pdftex.def Info: figure/fuzzy-algorithm.png used on input line 382.
+Package pdftex.def Info: figure/fuzzy-algorithm.png used on input line 428.
 (pdftex.def)             Requested size: 341.9989pt x 102.86586pt.
-
-<figure/prob-poss-01.png, id=51, 940.51375pt x 137.51375pt>
+ [10 <./figure/fuzzy-algorithm.png (PNG copy)>] <figure/prob-poss-01.png, id=58
+, 940.51375pt x 137.51375pt>
 File: figure/prob-poss-01.png Graphic file (type png)
 
 <use figure/prob-poss-01.png>
-Package pdftex.def Info: figure/prob-poss-01.png used on input line 411.
+Package pdftex.def Info: figure/prob-poss-01.png used on input line 457.
 (pdftex.def)             Requested size: 233.9978pt x 34.21259pt.
- [9 <./figure/fuzzy-algorithm.png (PNG copy)>]
-<figure/prob-poss-02.png, id=55, 949.5475pt x 146.5475pt>
+
+<figure/prob-poss-02.png, id=59, 949.5475pt x 146.5475pt>
 File: figure/prob-poss-02.png Graphic file (type png)
 
 <use figure/prob-poss-02.png>
-Package pdftex.def Info: figure/prob-poss-02.png used on input line 420.
+Package pdftex.def Info: figure/prob-poss-02.png used on input line 466.
 (pdftex.def)             Requested size: 233.9978pt x 36.11351pt.
- [10 <./figure/prob-poss-01.png (PNG copy)> <./figure/prob-poss-02.png (PNG cop
+ [11 <./figure/prob-poss-01.png (PNG copy)> <./figure/prob-poss-02.png (PNG cop
 y)>]
-<figure/membership-function.png, id=59, 1212.53pt x 868.24374pt>
+<figure/membership-function.png, id=63, 1212.53pt x 868.24374pt>
 File: figure/membership-function.png Graphic file (type png)
 
 <use figure/membership-function.png>
-Package pdftex.def Info: figure/membership-function.png used on input line 464.
+Package pdftex.def Info: figure/membership-function.png used on input line 510.
 
 (pdftex.def)             Requested size: 233.9978pt x 167.55144pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--494
-
- []
-
-[11 <./figure/membership-function.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 495--499
+ [12 <./figure/membership-function.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 535--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--502
+Underfull \hbox (badness 10000) in paragraph at lines 541--545
 
  []
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 505.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 505.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 503--508
+Underfull \hbox (badness 10000) in paragraph at lines 546--548
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--513
+LaTeX Warning: Command \textgreater invalid in math mode on input line 551.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 551.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--513
+Underfull \hbox (badness 10000) in paragraph at lines 555--559
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 531.
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--559
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 577.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 531.
-
-Underfull \hbox (badness 10000) in paragraph at lines 538--548
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 549--551
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 577.
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 584--594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
+Underfull \hbox (badness 10000) in paragraph at lines 595--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--556
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
+Underfull \hbox (badness 10000) in paragraph at lines 600--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--561
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
+Underfull \hbox (badness 10000) in paragraph at lines 605--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--574
+Underfull \hbox (badness 10000) in paragraph at lines 608--609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--579
+Underfull \hbox (badness 10000) in paragraph at lines 616--620
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 623--625
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--583
+Underfull \hbox (badness 10000) in paragraph at lines 626--629
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 587--589
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
 
  []
 
-<figure/cog.png, id=70, 388.45125pt x 227.85126pt>
+[15] <figure/cog.png, id=77, 388.45125pt x 227.85126pt>
 File: figure/cog.png Graphic file (type png)
  <use figure/cog.png>
-Package pdftex.def Info: figure/cog.png used on input line 633.
+Package pdftex.def Info: figure/cog.png used on input line 679.
 (pdftex.def)             Requested size: 198.0011pt x 116.1435pt.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ž in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--647
+Underfull \hbox (badness 10000) in paragraph at lines 685--693
 
  []
 
-[14] <figure/fuzzy-system.png, id=75, 1227.58624pt x 459.7175pt>
+[16 <./figure/cog.png>]
+<figure/fuzzy-system.png, id=85, 1227.58624pt x 459.7175pt>
 File: figure/fuzzy-system.png Graphic file (type png)
 
 <use figure/fuzzy-system.png>
-Package pdftex.def Info: figure/fuzzy-system.png used on input line 666.
+Package pdftex.def Info: figure/fuzzy-system.png used on input line 712.
 (pdftex.def)             Requested size: 237.60132pt x 88.97464pt.
- [15 <./figure/cog.png> <./figure/fuzzy-system.png (PNG copy)>]
+ [17 <./figure/fuzzy-system.png (PNG copy)>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [16]
-Overfull \hbox (16.28516pt too wide) in paragraph at lines 715--720
+
+Overfull \hbox (16.28516pt too wide) in paragraph at lines 767--772
 [][]\OT1/cmr/m/n/10.95 Computational tractabil-ity: Be-lief net-works are com-p
 u-ta-tion-ally tractable
  []
 
-[17] (./exam-shayganfar-3.bbl [18]
+[18] [19] (./exam-shayganfar-3.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-
+ [20]
 ! Misplaced alignment tab character &.
 l.53 \newblock Jones &
                        Bartlett Learning, 2011.
@@ -554,14 +568,12 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[19]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ” in font cmti10!
-
 ! Misplaced alignment tab character &.
 l.92 \newblock Springer Science &
                                   Business Media, 2001.
@@ -572,12 +584,12 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [20] (./exam-shayganfar-3.aux) ) 
+) [21] (./exam-shayganfar-3.aux) ) 
 Here is how much of TeX's memory you used:
- 3071 strings out of 495028
- 43415 string characters out of 6181497
- 101626 words of memory out of 5000000
- 6214 multiletter control sequences out of 15000+600000
+ 3077 strings out of 495028
+ 43578 string characters out of 6181497
+ 100635 words of memory out of 5000000
+ 6219 multiletter control sequences out of 15000+600000
  16407 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,26p,249b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -602,10 +614,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on exam-shayganfar-3.pdf (20 pages, 617179 bytes).
+Output written on exam-shayganfar-3.pdf (21 pages, 789429 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 172 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
