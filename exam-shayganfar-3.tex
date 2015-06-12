@@ -100,9 +100,9 @@ problem taken from \cite{korb:bayesian-ai}.
 \subsubsection{Markov Property}
 
 In Bayesian Networks, each variable is independent of its non-descendants given
-its parent variables. Meaning, there is no hidden connection between variables.
-Therefore, there are no direct dependencies in the system being modeled other
-than those already explicitly shown via edges. This is called \textit{Markov
+its parent variables. Therefore, there are no direct dependencies in the system
+being modeled other than those already explicitly shown via edges. Meaning,
+there is no hidden connection between variables. This is called \textit{Markov
 property} in a Bayesian Network. If Bayesian Networks do not adhere to Markov
 property, there will be redundant edges that connect independent variables
 together. Consequently, the network will not represent a monimal model.
@@ -110,11 +110,45 @@ together. Consequently, the network will not represent a monimal model.
 \subsubsection{Joint Probability Distribution}
 
 In many applications of probability, there are more than one random variable to
-be measured over the same sample space (e.g., existence of multiple sympthoms
+be measured over the same sample space (e.g., existence of multiple causes
 for a lung cancer).
 
-Bayesian Networks are often considered to be representations of joint
-probability distributions.
+A Bayesian Network provides a complete description of the domain. Once we
+identify random variables and their probabilistic relationships, the values in a
+joint probability distribution can then be obtained from the probabilities
+relating the random variables. Therefore, all the entries in the full joint
+probability distribution can be calculated from the information in the network.
+There is also a fundamental assumption that in the underlying structure of the
+problem being modeled by a Bayesian Network, not every single node is connected
+to every other one \cite{korb:bayesian-ai}. Meaning, if there is such a problem
+structure, then Bayesian Network can provide a compact representation of a
+model for that problem. In the following formula \textit{P($x_1, x_2, \ldots,
+x_n$)} is an abbreviation for the conjuction of \textit{\textbf{n}} assignments
+to each variable. Hence, the following formula gives the value of each variable:
+
+$P(x_1, x_2, \ldots, x_n) = \prod\limits_{i=1}^{n} P(x_i | parents (X_i))$\\	
+
+\noindent where \textit{parents($X_i$)} denotes the specific values of the
+variables in \textit{Parents($X_i$)}. As we see, based on Markov property, the
+product of only the appropriate elements (parent nodes) of the CPTs in the
+network represents the value of each individual entry in the joint probability
+distribution. The following provides an example based on the network provided in
+Figure \ref{fig:bbn}.\\
+
+\begin{footnotesize}
+\noindent $P(X= pos \wedge D = true \wedge C = false \wedge P = high \wedge S =
+true)$\\
+
+\noindent $= P(X= pos | D = true , C = false , P = high , S = true)$
+
+\noindent $\times P(D = true | C = false , P = high , S = true)$
+
+\noindent $\times P(C = false | P = high , S = true) \times P(P = high| S =
+true) \times P(S = true)$\\
+
+\noindent $= P(X= pos | C = false) \times P(D = true | C = false) \times P(C =
+false | P = high , S = true) \times P(P = high) \times P(S = true)$
+\end{footnotesize}
 
 \subsubsection{Types of Reasoning}
 
