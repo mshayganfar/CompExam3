@@ -200,7 +200,41 @@ the problem.
 
 \subsubsection{Conditional Independence}
 
+Bayesian networks which satisfy the Markov property explicitly express
+conditional independencies in probability distributions \cite{korb:bayesian-ai}.
+Figure \ref{fig:conditional-independence} shows three different situations where
+conditional independencies can occur, including: a) causal chain, b) common
+cause, and c) common effect. Figure \ref{fig:conditional-independence}(a) shows
+a \textit{causal chain} between \textit{A} and \textit{B} and \textit{C}. For
+instance, the fact that being a smoker can cause lung cancer which causes
+shortness of breath, in our example. This kind of causal chains can cause
+a conditional independence which can be described as: $P(C | A \wedge B) = P(C
+| B)$. This means that if one already knows that \textit{C} has occurred,
+knowing that \textit{A} occurred doesn’t make a difference to one's beliefs
+about \textit{C}. Figure \ref{fig:conditional-independence}(b) shows that both
+variables \textit{A} and \textit{C} have a \textit{common cause} called
+\textit{B}. For instance, based on our example, lung cancer is a common cause
+for a positive x-ray and dyspnoea in patient. This kind of common causes can
+also cause a conditional independence which , again, can be described as: $P(C |
+A \wedge B) = P(C | B)$. This means that if one already knows about \textit{B},
+then an additional information that \textit{A} provides, will not give more
+information about the chances of \textit{C}. Figure
+\ref{fig:conditional-independence}(c) shows that one variable has two causes.
+\textit{Common effect} produces the opposite conditional independence to that of
+common causes and causal chains. This means that parents are independent until
+the common effect provides new information. This kind of common effects can
+cause a conditional dependence which can be described as: $P(A | B \wedge C)
+\neq P(A | B)$. In other words, if one knows about \textit{B} (the effect), then
+finds out that for example \textit{A} (one of two causes) is absent, this
+increases the probability of \textit{C} (alternative cause).
 
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.9\textwidth]{figure/conditional-independence.png}
+  \caption{(a) causal chain, (b) common cause, and (c) common effect
+  \cite{korb:bayesian-ai}.}
+  \label{fig:conditional-independence}
+\end{figure}
 
 \subsubsection{d-Separation}
 
