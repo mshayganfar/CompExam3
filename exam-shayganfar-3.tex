@@ -22,6 +22,9 @@
 
 \section{Introduction to Uncertainty in AI}
 
+Problems with a large number of variables require maintaining large joint
+distributions to compute posterior probabilities based on evidence.
+
 \section{Sources and Types of Uncertainties}
 
 -Sources:
@@ -35,13 +38,6 @@
 \section{Theories of Uncertainties}
 
 \subsection{Bayesian Belief Networks}
-
-Problems with a large number of variables require maintaining large joint
-distributions to compute posterior probabilities based on evidence.
-
-Constructing a belief network can be divided into two different subtasks: a)
-specifying the causal structure among the existing variables in the netwrok, and
-b) specifying the prior and conditional probabilies for these variables.
 
 A \textit{Bayesian Belief Network} is graph consisting of nodes and edges which
 provides a graphical model for reasoning under uncertainty. Each node in the
@@ -58,18 +54,67 @@ variables \cite{das:decision-making-agents}. Assuming discrete variables, the
 strength of the relationship between variables is quantified by conditional
 probability distributions associated with each node.
 
-\subsubsection{Nodes and Values}
+Constructing a belief network can be divided into two different subtasks: a)
+specifying the causal structure among the existing variables in the netwrok, and
+b) specifying the prior and conditional probabilies for these variables.
 
 \subsubsection{Network's Structure}
 
+The structure, or topology, of the network captures qualitative relationships
+between variables (see Figure \ref{fig:bbn}). The first step in building the
+Bayesian network's structure is to determine what are the nodes/variables to
+represent in the structure, and what are their possible values? For instance,
+nodes with discrete values can have boolean (to represent that a proposition is
+true or false), ordered (e.g., enumeration), and integral values (e.g., height).
+Then, one should determine the exisiting causality between nodes, i.e., to
+determine which node (parent) influences the other (child) and conncet them
+through directed edges \cite{korb:bayesian-ai}.
+
 \subsubsection{Conditional Probability Table}
 
-The probabilities in a CPT are typically acquired from experts of the subject,
-but they can also be learned automatically using machine learning approaches.
+As we mentioned earlier, the next step is to quantify the relationships between
+connected nodes by specifying the conditional probability distribution for each
+node. These conditional probability distributions appear as the
+\textit{Conditional Probability Tables} (CPT) if we consider discerete variables
+in the structure. To calculate values in CPTs, for each node, we need to think
+about all possible combinations of values of parent nodes. Each row in a CPT
+will contain the value of a conditional probability of a node for each case of
+the possible combination of values for the parent node. Clearly, a node has many
+parents or a node with the parents taking a large number of values, can cause
+creating very large CPTs. The size of the CPT is exponential in the number of
+parents. For instance, if the nodes of a network are boolean, a variable with n
+parents requires a CPT with $2^{n+1}$ probabilities. The probabilities in a CPT
+are typically acquired from experts of the subject, but they can also be learned
+automatically using machine learning approaches. Figure \ref{fig:bbn} shows
+variables, their relations, and associated CPTs for diagnosis of a lung cancer
+problem taken from \cite{korb:bayesian-ai}.
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.8\textwidth]{figure/bbn.png}
+  \caption{A Belief Network for a lung cancer problem
+  \cite{korb:bayesian-ai}.}
+  \label{fig:bbn}
+\end{figure}
 
 \subsubsection{Markov Property}
 
+In Bayesian Networks, each variable is independent of its non-descendants given
+its parent variables. Meaning, there is no hidden connection between variables.
+Therefore, there are no direct dependencies in the system being modeled other
+than those already explicitly shown via edges. This is called \textit{Markov
+property} in a Bayesian Network. If Bayesian Networks do not adhere to Markov
+property, there will be redundant edges that connect independent variables
+together. Consequently, the network will not represent a monimal model.
+
 \subsubsection{Joint Probability Distribution}
+
+In many applications of probability, there are more than one random variable to
+be measured over the same sample space (e.g., existence of multiple sympthoms
+for a lung cancer).
+
+Bayesian Networks are often considered to be representations of joint
+probability distributions.
 
 \subsubsection{Types of Reasoning}
 
