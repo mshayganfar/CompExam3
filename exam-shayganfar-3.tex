@@ -92,7 +92,7 @@ problem taken from \cite{korb:bayesian-ai}.
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.8\textwidth]{figure/bbn.png}
+  \includegraphics[width=0.6\textwidth]{figure/bbn.png}
   \caption{A Belief Network for a lung cancer problem
   \cite{korb:bayesian-ai}.}
   \label{fig:bbn}
@@ -191,14 +191,13 @@ the problem.
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.85\textwidth]{figure/reasoning-types.png}
+  \includegraphics[width=0.65\textwidth]{figure/reasoning-types.png}
   \caption{Types of Reasoning \cite{korb:bayesian-ai}.}
   \label{fig:reasoning-types}
 \end{figure}
 
-\subsubsection{Probability Theory}
-
 \subsubsection{Conditional Independence}
+\label{sec:conditional-independence}
 
 Bayesian networks which satisfy the Markov property explicitly express
 conditional independencies in probability distributions \cite{korb:bayesian-ai}.
@@ -230,13 +229,43 @@ increases the probability of \textit{C} (alternative cause).
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.9\textwidth]{figure/conditional-independence.png}
+  \includegraphics[width=0.75\textwidth]{figure/conditional-independence.png}
   \caption{(a) causal chain, (b) common cause, and (c) common effect
   \cite{korb:bayesian-ai}.}
   \label{fig:conditional-independence}
 \end{figure}
 
 \subsubsection{d-Separation}
+
+The concepts of conditional dependencies and independencies, discussed above,
+can apply not only between pairs of nodes, but also between sets of nodes. In
+general, it is possible to determine wheter two sets of nodes \textit{X} and
+\textit{Y} are independent, if there is a set of evidence nodes \textit{E},
+given the Markov property. If the two sets of nodes \textit{X} and \textit{Y}
+are \textit{d-separated} (directional-dependent separation) by evidence set of
+nodes \textit{E}, then (given the Markov property) the two sets of nodes
+\textit{X} and \textit{Y} are conditionally independent given \textit{E}. Figure
+\ref{fig:d-separation} shows how the evidence set of nodes \textit{E} in three
+different conditions is blocking the two sets of nodes \textit{X} and
+\textit{Y}. In a graph, a path is blocked given a set of nodes \textit{E}, if
+there is a node \textit{Z} on the path for which at least one of the three
+conditions discussed in Section \ref{sec:conditional-independence} holds.
+
+\begin{figure}[tbh]
+  \center
+  \includegraphics[width=0.55\textwidth]{figure/d-separation.png}
+  \caption{Three types of situations in which the path from \textit{X} to
+  \textit{Y} can be blocked, given evidence \textit{E}. In each case, \textit{X}
+  and \textit{Y} are d-separated by \textit{E}
+  \cite{korb:bayesian-ai}.}
+  \label{fig:d-separation}
+\end{figure}
+
+Analogous to our example, based on this definition the pollution ans smoking
+variables are d-separated from x-ray and dyspnoea (blocking condition 1), x-ray
+is d-separated from dyspnoea (blocking condition 2), and if cancer and x-ray or
+dyspnoea are not observed, then smoking variable would have been d-separated
+from pollution (blocking condition 3).
 
 \subsection{Dempster-Shafer Theory}
 
