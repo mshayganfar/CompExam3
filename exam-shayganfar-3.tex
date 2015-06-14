@@ -99,6 +99,7 @@ problem taken from \cite{korb:bayesian-ai}.
 \end{figure}
 
 \subsubsection{Markov Property}
+\label{sec:markov-property}
 
 In Bayesian Networks, each variable is independent of its non-descendants given
 its parent variables. Therefore, there are no direct dependencies in the system
@@ -199,37 +200,48 @@ the problem.
 \subsubsection{Conditional Independence}
 \label{sec:conditional-independence}
 
-Bayesian networks which satisfy the Markov property explicitly express
-conditional independencies in probability distributions \cite{korb:bayesian-ai}.
-Figure \ref{fig:conditional-independence} shows three different situations where
-conditional independencies can occur, including: a) causal chain, b) common
-cause, and c) common effect. Figure \ref{fig:conditional-independence}(a) shows
-a \textit{causal chain} between \textit{A} and \textit{B} and \textit{C}. For
-instance, the fact that being a smoker can cause lung cancer which causes
-shortness of breath, in our example. This kind of causal chains can cause
-a conditional independence which can be described as: $P(C | A \wedge B) = P(C
-| B)$. This means that if one already knows that \textit{C} has occurred,
-knowing that \textit{A} occurred doesn’t make a difference to one's beliefs
-about \textit{C}. Figure \ref{fig:conditional-independence}(b) shows that both
-variables \textit{A} and \textit{C} have a \textit{common cause} called
-\textit{B}. For instance, based on our example, lung cancer is a common cause
-for a positive x-ray and dyspnoea in patient. This kind of common causes can
-also cause a conditional independence which , again, can be described as: $P(C |
-A \wedge B) = P(C | B)$. This means that if one already knows about \textit{B},
-then an additional information that \textit{A} provides, will not give more
-information about the chances of \textit{C}. Figure
+Bayesian networks which satisfy the Markov property (see Section
+\ref{sec:markov-property}) explicitly express conditional independencies in
+probability distributions \cite{korb:bayesian-ai}. Therefore, since a Bayesian
+Network is based on joint probability distribution of a set of random variables,
+the knowledge about conditional independence of these random variables is
+important for understanding of reasoning based on conditinal probailities. 
+
+Two random variables \textit{A} and \textit{B} are \textit{conditionally
+independent} given another variable \textit{C}, if $p(A,B|C) = p(A|C).p(B|C)$,
+therefore:
+
+\begin{center}
+$p(A|B,C) = \frac{p(A,B|C)}{p(B|C)} = \frac{p(A|C).p(B|C)}{p(B|C)} = p(A|C)$
+\end{center}
+
+\noindent And similarly, $p(B|A,C) = p(B|C)$. Figure
+\ref{fig:conditional-independence}(a) shows a \textit{causal chain} between
+\textit{A} and \textit{B} and \textit{C}. For instance, the fact that being a
+smoker can cause lung cancer which causes shortness of breath, in our example.
+This kind of causal chains can cause a conditional independence which can be
+described as: $P(C|A,B) = P(C|B)$. This means that if one already knows that
+\textit{C} has occurred, knowing that \textit{A} occurred doesn’t make a
+difference to one's beliefs about \textit{C}. Figure
+\ref{fig:conditional-independence}(b) shows that both variables \textit{A} and
+\textit{C} have a \textit{common cause} called \textit{B}. For instance, based
+on our example, lung cancer is a common cause for a positive x-ray and dyspnoea
+in patient. This kind of common causes can also cause a conditional independence
+which , again, can be described as: $P(C|A,B) = P(C|B)$. This means that if one
+already knows about \textit{B}, then an additional information that \textit{A}
+provides, will not give more information about the chances of \textit{C}. Figure
 \ref{fig:conditional-independence}(c) shows that one variable has two causes.
 \textit{Common effect} produces the opposite conditional independence to that of
 common causes and causal chains. This means that parents are independent until
 the common effect provides new information. This kind of common effects can
-cause a conditional dependence which can be described as: $P(A | B \wedge C)
-\neq P(A | B)$. In other words, if one knows about \textit{B} (the effect), then
-finds out that for example \textit{A} (one of two causes) is absent, this
-increases the probability of \textit{C} (alternative cause).
+cause a conditional dependence which can be described as: $P(A|B,C) \neq
+P(A|B)$. In other words, if one knows about \textit{B} (the effect), then finds
+out that for example \textit{A} (one of two causes) is absent, this increases
+the probability of \textit{C} (alternative cause).
 
 \begin{figure}[tbh]
   \center
-  \includegraphics[width=0.75\textwidth]{figure/conditional-independence.png}
+  \includegraphics[width=0.8\textwidth]{figure/conditional-independence.png}
   \caption{(a) causal chain, (b) common cause, and (c) common effect
   \cite{korb:bayesian-ai}.}
   \label{fig:conditional-independence}
@@ -244,12 +256,14 @@ general, it is possible to determine wheter two sets of nodes \textit{X} and
 given the Markov property. If the two sets of nodes \textit{X} and \textit{Y}
 are \textit{d-separated} (directional-dependent separation) by evidence set of
 nodes \textit{E}, then (given the Markov property) the two sets of nodes
-\textit{X} and \textit{Y} are conditionally independent given \textit{E}. Figure
-\ref{fig:d-separation} shows how the evidence set of nodes \textit{E} in three
-different conditions is blocking the two sets of nodes \textit{X} and
-\textit{Y}. In a graph, a path is blocked given a set of nodes \textit{E}, if
-there is a node \textit{Z} on the path for which at least one of the three
-conditions discussed in Section \ref{sec:conditional-independence} holds.
+\textit{X} and \textit{Y} are conditionally independent given \textit{E}.
+d-separation is a topological criterion for Bayesian Networks
+\cite{russell:ai-modern}. Figure \ref{fig:d-separation} shows how the evidence
+set of nodes \textit{E} in three different conditions is blocking the two sets
+of nodes \textit{X} and \textit{Y}. In a graph, a path is blocked given a set of
+nodes \textit{E}, if there is a node \textit{Z} on the path for which at least
+one of the three conditions discussed in Section
+\ref{sec:conditional-independence} holds.
 
 \begin{figure}[tbh]
   \center
@@ -261,7 +275,7 @@ conditions discussed in Section \ref{sec:conditional-independence} holds.
   \label{fig:d-separation}
 \end{figure}
 
-Analogous to our example, based on this definition the pollution ans smoking
+Analogous to our example, based on this definition the pollution and smoking
 variables are d-separated from x-ray and dyspnoea (blocking condition 1), x-ray
 is d-separated from dyspnoea (blocking condition 2), and if cancer and x-ray or
 dyspnoea are not observed, then smoking variable would have been d-separated
