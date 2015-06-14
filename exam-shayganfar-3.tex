@@ -25,16 +25,6 @@
 Problems with a large number of variables require maintaining large joint
 distributions to compute posterior probabilities based on evidence.
 
-\section{Sources and Types of Uncertainties}
-
--Sources:
-
-+ Noise (imprecise observation)
-
-+ Uncertain Change (unprediatable or stochastis behavior of the world)
-
-+ Incompleteness or igonorance (missing information)
-
 \section{Theories of Uncertainties}
 
 \subsection{Bayesian Belief Networks}
@@ -798,14 +788,15 @@ defuzzification step (see Section \ref{sec:defuzzification}).
 
 \section{Strengths and Weaknesses}
 
-In general, there is an increasing trend of computational complexity Fuzzy Logic
-to probabilistic approaches and Dempster-Shafer theory. However, the
-representational power and precision increases in the same order and direction.
+In general, there is an increasing trend of computational complexity from
+using Fuzzy Logic to probabilistic approaches and Dempster-Shafer theory.
+However, the representational power and precision increases in the same order
+and direction.
 
 - Locality in rule-based systems vs. using all evidences in probabilistic
 systems [R\&N AI book p.524]
 
--Detachment in rule-based systems vs. requiring the source of evidence for
+- Detachment in rule-based systems vs. requiring the source of evidence for
 subsequent probabilistic reasoning [R\&N AI book p.524]
 
 - Dempster-Shafer theory allows no definite decision in many cases, whereas
@@ -817,6 +808,49 @@ terms of how our beliefs would change in the face of future informaiton
 gathering \cite{russell:ai-modern}.
 
 \subsection{Advantages and Disadvantages of Belief Networks}
+
+- Transparent representation of causal relationships between system variables.
+
+- BNs can facilitate learning about causal relationships between variables.
+
+- The graphical nature of a BN clearly displays the links between different
+system components. Knowledge of the structure of a system can reveal the
+dependence and independence of variables and suggest a direction of causation.
+Bayesian Networks visually represent all the relationships between the variables
+in the system with connecting arcs.
+
+- It is relatively easy to recognize the dependence and independence between
+various nodes.
+
+- Bayesian networks can handle situations where the data set is incomplete since
+the model accounts for dependencies between all variables.
+
+- A BN can be readily updated when new knowledge becomes available.
+
+- Suitable for small and incomplete data sets.
+
+- New evidence can be incorporated.
+
+A major disadvantage of belief networks is the high level of effort required to
+build network models. Although it is relatively easy to build a belief network
+structure with the help of subject matter experts, the model will require a
+significant amount of probability data as the number of nodes and links in the
+structure increase. The size of a CPT corresponding to a node with multiple
+parents can potentially be huge. For example, the number of independent entries
+in the CPT of a binary node (a node with two states) with 8 binary parent
+variables is 128.
+
+Belief networks are also poor at handling continuous variables. Current
+software handles continuous variables in a very restrictive manner (for example,
+they must be Gaussian and can only be children).
+
+- Efficient reasoning
+
+- It can be computationally intensive if the conditional independencies are not
+considered properly among the variables.
+
+- Constructing a Bayesian Network involves identifying causal dependencies
+between different events, which might not be an easy task.
 
 Modeling difficulites:
 
@@ -833,47 +867,50 @@ advantages and disadvantages. Advantages of belief networks include
   probability estimates is guaranteed to be consistent with probability theory.
   This advantage stems from the Bayesian update procedure’s strict derivation
   from the axioms of probability.
+  
   \item Graphical models: Belief networks graphically depict the
   interdependencies that exist between related pieces of domain knowledge,
   enhancing understanding of the domain. The structure of a belief network
   captures the cause-effect relationships that exist amongst the variables of
   the domain. The ease of causal interpretation in belief network models
-  typically makes them easier to construct than other models, minimizing the
-  knowledge engineering costs and making them easier to modify.
+  typically makes them easier to construct than other models, making them easier
+  to modify.
+  
   \item Predictive and diagnostic reasoning: Belief networks combine both
   deductive/predictive and abductive/diagnostic reasoning. Interdependencies
-  among variables in a network are accurately captured and speculative if-then
-  type computation can be performed.
+  among variables in a network can be accurately captured.
+  
   \item Computational tractability: Belief networks are computationally
   tractable for most practical applications. This efficiency stems principally
   from the exploitation of conditional independence relationships over the
-  domain. We have presented an efficient single-pass evidence propagation
-  algorithm for networks without loops.
+  domain.
+  
   \item Evidence handling: Evidence can be posted to any node in a belief
   network. This means that subjective evidence can be posted at an intermediate
   node representing an abstract concept.
 \end{itemize}
 
-A major disadvantage of belief network technology is the high level of effort
-required to build network models. Although it is relatively easy to build a
-belief network structure with the help of subject matter experts, the model will
-require a significant amount of probability data as the number of nodes and
-links in the structure increase. The size of a CPT corresponding to a node with
-multiple parents can potentially be huge. For example, the number of independent
-entries in the CPT of a binary node (a node with two states) with 8 binary
-parent variables is 128.
+- Difficult to design the network (required variables and their relations).
 
-Belief networks are also poor at handling continuous variables. Current
-software handles continuous variables in a very restrictive manner (for example,
-they must be Gaussian and can only be children). Lener et al. (2001) developed
-an inference algorithm for static hybrid belief networks, which are Conditional
-Linear Gaussian models, where the conditional distribution of the continuous
-variables assigned to the discrete variables is a multivariate Gaussian. Cob and
-Shenoy (2004) developed an inference algorithm in hybrid belief networks using
-Mixtures of Truncated Potentials. But these techniques are yet to be incorporated
-in commercial software.
+- Difficult to obtain the CPTs.
+
+- It is challenging to get experts' knowledge in the form probability to build
+the network.
+
+- No feedback loops. The BN structure has an acyclic nature which prevents
+typical feedback loops in design of its applications. 
+
+- All branches must be calculated in order to calculate the probability of any
+one branch.
 
 \subsection{Advantages and Disadvantages of Dempster-Shafer Theory}
+
+- Effectively representing the uncertainty on the correctness of the different
+hypotheses by means of two limiting values, belief and plausibility, overtaking
+the difficulties that experts encounter in characterizing their uncertainty
+using single probability values or probability density functions.
+
+- Addresses the concept of possibility.
 
 - Its ability to represent ignorance in a direct and straightforward fashion.
 
@@ -889,6 +926,9 @@ in commercial software.
 
 Dis:
 
+- This allows one to state that certain prior and conditional probabilities
+cannot be assessed.
+
 - Lack of assessment strategies: There is a necessity to assign precise numbers
 in Dempster-Shafer theory's applications to each subset $A \subseteq \Theta$ by
 the basic assignment m. Although, the precise degrees of the desired measures
@@ -896,12 +936,12 @@ may exist, but it is perhaps too difficult to determine them with the necessary
 precision.
 
 - Instability: Underlying beliefs may be unstable. Estimated beliefs may be
-influenced by the condi- tions of its estimation.
+influenced by the conditions of its estimation.
 
 - Ambiguity: Ambiguous or imprecise judgement could not be expressed by the
 evidence measures.
 
-- The main problem of the Dempster-Shafer theoryin its original formulation is
++ The main problem of the Dempster-Shafer theory in its original formulation is
 that its computational complexity grows exponentially with the number of
 hypotheses.
 
