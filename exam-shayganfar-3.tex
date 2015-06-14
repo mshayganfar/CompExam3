@@ -832,56 +832,37 @@ advantages and disadvantages. Advantages of Bayesian Networks include:
 
 \subsection{Advantages and Disadvantages of Dempster-Shafer Theory}
 
-- Effectively representing the uncertainty on the correctness of the different
-hypotheses by means of two limiting values, belief and plausibility, overtaking
-the difficulties that experts encounter in characterizing their uncertainty
-using single probability values or probability density functions.
+Advantages of Dempster-Shafer theory are:
 
-- Addresses the concept of possibility.
+\begin{itemize}
+  \item Addressing the concept of possibility.
+  
+  \item The ability to represent the concept of ignorance to allow one to
+  specify a degree of ignorance in a situation, instead of being forced to
+  supply prior probabilities.
+  
+  \item Consistent with classical probability theory.
+  
+  \item Distinguishing randomness from missing information.
+  
+  \item No required priori knowledge.
+  
+  \item Including an evidence combination rule which provides an operator to
+  integrate multiple pieces of information from different sources.
+\end{itemize}
 
-- Its ability to represent ignorance in a direct and straightforward fashion.
+\noindent Disadvantages of Dempster-Shafer theory are:
 
-- Its consistency with classical probability theory.
+\begin{itemize}
+  \item Computational complexity grows exponentially with the number of
+  hypotheses (in original formulation).
+  
+  \item Small modifications of the evidence assignments may lead to a
+  completely different conclusion which can lead to misleading and
+  counter-intuitive results.
+\end{itemize}
 
-- Its manageable computational complexity.
-
-- Represents the actual state of belief more precisely
-
-- Distinguishes randomness from missing information
-
-- Prior probabilities not required.
-
-Dis:
-
-- This allows one to state that certain prior and conditional probabilities
-cannot be assessed.
-
-- Lack of assessment strategies: There is a necessity to assign precise numbers
-in Dempster-Shafer theory's applications to each subset $A \subseteq \Theta$ by
-the basic assignment m. Although, the precise degrees of the desired measures
-may exist, but it is perhaps too difficult to determine them with the necessary
-precision.
-
-- Instability: Underlying beliefs may be unstable. Estimated beliefs may be
-influenced by the conditions of its estimation.
-
-- Ambiguity: Ambiguous or imprecise judgement could not be expressed by the
-evidence measures.
-
-+ The main problem of the Dempster-Shafer theory in its original formulation is
-that its computational complexity grows exponentially with the number of
-hypotheses.
-
-- mathematically complex
-
-- Has to be calculated over all possible sets of states
-
-- A small modification of the evidence assignments may lead to a completely
-different conclusion.
-
-- Can lead to misleading and counter-intuitive results.
-
-\subsection{Advantages and Disadvantages of Fuzzy Logic}
+\subsection{Advantages and Disadvantages of Fuzzy Logic Theory}
 
 - Easy to design 
 
