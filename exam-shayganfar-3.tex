@@ -50,10 +50,11 @@ probability of the variable given the value of its parents in the graph. Each
 individual edge between two variables represents the relation or conditional
 dependence between those two variables. Also, the explicit directions
 represented by arrows as directinoal edges are the notion of the causality in
-the network. They are always drawn from cause nodes to effect nodes, indicating
-dependencies between variables \cite{das:decision-making-agents}. Assuming
-discrete variables, the strength of the relationship between variables is
-quantified by conditional probability distributions associated with each node.
+the network (see Figure \ref{fig:bbn}). They are always drawn from cause nodes
+to effect nodes, indicating dependencies between variables
+\cite{das:decision-making-agents}. Assuming discrete variables, the strength of
+the relationship between variables is quantified by conditional probability
+distributions associated with each node.
 
 Constructing a belief network can be divided into two different subtasks: a)
 specifying the causal structure among the existing variables in the netwrok, and
@@ -66,29 +67,10 @@ between variables (see Figure \ref{fig:bbn}). The first step in building the
 Bayesian network's structure is to determine what are the nodes/variables to
 represent in the structure, and what are their possible values? For instance,
 nodes with discrete values can have boolean (to represent that a proposition is
-true or false), ordered (e.g., enumeration), and integral values (e.g., height).
-Then, one should determine the exisiting causality between nodes, i.e., to
-determine which node (parent) influences the other (child) and conncet them
-through directed edges \cite{korb:bayesian-ai}.
-
-\subsubsection{Conditional Probability Table}
-
-As we mentioned earlier, the next step is to quantify the relationships between
-connected nodes by specifying the conditional probability distribution for each
-node. These conditional probability distributions appear as the
-\textit{Conditional Probability Tables} (CPT) if we consider discerete variables
-in the structure. To calculate values in CPTs, for each node, we need to think
-about all possible combinations of values of parent nodes. Each row in a CPT
-will contain the value of a conditional probability of a node for each case of
-the possible combination of values for the parent node. Clearly, a node has many
-parents or a node with the parents taking a large number of values, can cause
-creating very large CPTs. The size of the CPT is exponential in the number of
-parents. For instance, if the nodes of a network are boolean, a variable with n
-parents requires a CPT with $2^{n+1}$ probabilities. The probabilities in a CPT
-are typically acquired from experts of the subject, but they can also be learned
-automatically using machine learning approaches. Figure \ref{fig:bbn} shows
-variables, their relations, and associated CPTs for diagnosis of a lung cancer
-problem taken from \cite{korb:bayesian-ai}.
+true or false), ordered (e.g., enumeration), and integral values (e.g., height
+of a person). Then, one should determine the exisiting causality between nodes,
+i.e., to determine which node (parent) influences the other (child) and conncet
+them through directed edges \cite{korb:bayesian-ai}.
 
 \begin{figure}[tbh]
   \center
@@ -97,6 +79,26 @@ problem taken from \cite{korb:bayesian-ai}.
   \cite{korb:bayesian-ai}.}
   \label{fig:bbn}
 \end{figure}
+
+\subsubsection{Conditional Probability Table}
+
+As we mentioned earlier, after specifying the structure of a Bayesian
+Network, the next step is to quantify the relationships between connected nodes
+by specifying the conditional probability distribution for each node. These
+conditional probability distributions appear as the \textit{Conditional
+Probability Tables} (CPT) if we consider discerete variables in the structure.
+To calculate values in CPTs, for each node, we need to think about all possible
+combinations of values of parent nodes. Each row in a CPT will contain the value
+of a conditional probability of a node for each case of the possible combination
+of values for the parent node. Clearly, a node has many parents or a node with
+the parents taking a large number of values, can cause creating very large CPTs.
+The size of the CPT is exponential in the number of parents. For instance, if
+the nodes of a network are boolean, a variable with \textit{n} parents requires
+a CPT with $2^{n+1}$ probabilities. The probabilities in a CPT are typically
+acquired from experts of the subject, but they can also be learned automatically
+using machine learning approaches. Figure \ref{fig:bbn} shows variables, their
+relations, and associated CPTs for diagnosis of a lung cancer problem taken from
+\cite{korb:bayesian-ai}.
 
 \subsubsection{Markov Property}
 \label{sec:markov-property}
@@ -107,31 +109,32 @@ being modeled other than those already explicitly shown via edges. Meaning,
 there is no hidden connection between variables. This is called \textit{Markov
 property} in a Bayesian Network. If Bayesian Networks do not adhere to Markov
 property, there will be redundant edges that connect independent variables
-together. Consequently, the network will not represent a monimal model.
+together. Consequently, the network will not represent a minimal model.
 
 \subsubsection{Joint Probability Distribution}
 
 In many applications of probability, there are more than one random variable to
 be measured over the same sample space (e.g., existence of multiple causes
-for a lung cancer).
+for a lung cancer). A Bayesian Network provides a complete description of the
+domain. Once we identify random variables and their probabilistic relationships,
+the values in a joint probability distribution can then be obtained from the
+probabilities relating the random variables. Therefore, all the entries in the
+full joint probability distribution can be calculated from the information in
+the network. There is also a fundamental assumption that in the underlying
+structure of the problem being modeled by a Bayesian Network, not every single
+node is connected to every other one \cite{korb:bayesian-ai}. Therefore, if
+there is such a problem structure, then Bayesian Network can provide a compact
+representation of a model for that problem. In the following formula
+\textit{P($x_1, x_2, \ldots, x_n$)} is an abbreviation for the conjuction of
+\textit{\textbf{n}} assignments to each variable. Hence, the following formula
+gives the value of each variable:
 
-A Bayesian Network provides a complete description of the domain. Once we
-identify random variables and their probabilistic relationships, the values in a
-joint probability distribution can then be obtained from the probabilities
-relating the random variables. Therefore, all the entries in the full joint
-probability distribution can be calculated from the information in the network.
-There is also a fundamental assumption that in the underlying structure of the
-problem being modeled by a Bayesian Network, not every single node is connected
-to every other one \cite{korb:bayesian-ai}. Meaning, if there is such a problem
-structure, then Bayesian Network can provide a compact representation of a
-model for that problem. In the following formula \textit{P($x_1, x_2, \ldots,
-x_n$)} is an abbreviation for the conjuction of \textit{\textbf{n}} assignments
-to each variable. Hence, the following formula gives the value of each variable:
-
+\begin{center}
 $P(x_1, x_2, \ldots, x_n) = \prod\limits_{i=1}^{n} P(x_i | parents (X_i))$\\	
+\end{center}
 
 \noindent where \textit{parents($X_i$)} denotes the specific values of the
-variables in \textit{Parents($X_i$)}. As we see, based on Markov property, the
+variables in \textit{Parents($X_i$)}. As we see, given Markov property, the
 product of only the appropriate elements (parent nodes) of the CPTs in the
 network represents the value of each individual entry in the joint probability
 distribution. The following provides an example based on the network provided in
@@ -152,7 +155,7 @@ true) \times P(S = true)$\\
 false | P = high , S = true) \times P(P = high) \times P(S = true)$
 \end{footnotesize}
 
-\subsubsection{Types of Reasoning}
+\subsubsection{Reasoning in Bayesian Networks}
 
 Reasoning in Bayesian Networks is the process of updating beliefs in face of the
 evidences. In other words, it is the process of efficiently deducing the belief
@@ -178,7 +181,7 @@ of a common effect. For instance,  suppose that there are two different causes
 for lung cancer, smoking and pollution (see Figure \ref{fig:bbn}). Initially
 these two causes are independent of each other; i.e., the patient smoking or
 not, does not change the parobability of the patient being subject to pollution.
-However, as soon as the patient is diagnized with cancer, the probability of
+However, as soon as the patient is diagnosed with cancer, the probability of
 smoking or living in a polluted area increases. Now, if the doctor discovers
 that her patient is a smoker, then the probaility of him living in polluted area
 dicreases. Therefore, the presence of one explanatory cause for the cancer
@@ -188,7 +191,7 @@ away} the alternative one.
 
 \textbf{Combined reasoning} -- Sometimes the reaosning does not fit to one of
 the explained types. Thus, any of these reasoning types can be combined to solve
-the problem.
+a problem.
 
 \begin{figure}[tbh]
   \center
