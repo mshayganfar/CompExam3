@@ -42,6 +42,13 @@ Kevin~B. Korb and Ann~E. Nicholson.
 \newblock {\em Bayesian Artificial Intelligence}.
 \newblock Taylor \& Francis, 2003.
 
+\bibitem{orozco:multisensor-bn}
+Jos{\'e} Antonio~L{\'o}pez Orozco, Jes{\'u}s~Manuel de~la Cruz~Garc{\'i}a,
+  J.~Sanz, and J.~Flores.
+\newblock Multisensor fusion of environment measures using bayesian networks.
+\newblock In {\em Fusion'98: Proceedings of the International Conference on
+  Multisource-Multisensor Information Fusion}. CSREA Press, 1998.
+
 \bibitem{russell:ai-modern}
 Stuart~J. Russell and Peter Norvig.
 \newblock {\em Artificial Intelligence: A Modern Approach}.
@@ -69,6 +76,18 @@ Steven Tanimoto.
 \newblock {\em The elements of artificial intelligence: an introduction using
   LISP}.
 \newblock Computer Science Press, 1987.
+
+\bibitem{toussaint:bayesian-motion-planning}
+Marc Toussaint.
+\newblock Bayesian inference for motion control and planning.
+\newblock Technical Report 2007-22, Machine Learning Group, TU Berlin, 2007.
+
+\bibitem{xiang:dai-bn}
+Yang Xiang.
+\newblock Distributed multi-agent probabilistic reasoning with bayesian
+  networks.
+\newblock In Zbigniew~W. Ras and Maria Zemankova, editors, {\em Methodologies
+  for Intelligent Systems}, pages 285--294. Springer Berlin Heidelberg, 1994.
 
 \bibitem{yager:dst-combination-rules}
 Ronald~R. Yager.
