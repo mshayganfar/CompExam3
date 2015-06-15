@@ -92,6 +92,10 @@ David~B. Grimes, Rawichote Chalodhorn, and Rajesh P.~N. Rao.
 \newblock In {\em Proceedings of Robotics: Science and Systems (RSS’06)},
   2006.
 
+\bibitem{grootswagers:bbn-applications}
+Tijl Grootswagers, Bas Kooiker, and Lysanne Sloff.
+\newblock Applications of bayesian network models in cognitive science, 2012.
+
 \bibitem{iwahashi:belief-system-hri}
 Naoto Iwahashi.
 \newblock A method for the coupling of belief systems through human-robot

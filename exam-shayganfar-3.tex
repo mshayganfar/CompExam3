@@ -890,7 +890,9 @@ Advantages of Fuzzy Logic theory are:
 
 \section{Applications of Bayesian Networks}
 
-motion control - sensor fusion - modeling domain knowledge
+There are different applications of Bayesian Networks in robots and autonomous
+agents such as motion control, sensory data fusion, and modeling domain
+knowledge. In this section, we provide some of these applications.
 
 In \cite{toussaint:bayesian-motion-planning} Toussaint proposes a new approach
 to robotic motion control and planning based on probabilistic inference. His
@@ -898,103 +900,78 @@ method uses structured probabilistic models to represent the scenario and
 efficient inference techniques (belief propagation) to solve planning problems.
 He also uses Bayesian Networks to find solutions to problems combining multiple
 criteria or sources of information (sensor fusion) beside using them to solve a
-fusion problem on the motor level.
-
-\cite{park:bn-service-robot} uses probabilistic modeling for service robots to
-provide users with high-level context-aware services required in home
-environment, and proposes a systematic modeling approach for modeling a number
-of Bayesian networks.
-
-In \cite{orozco:multisensor-bn} researchers have developed a system to integrate
+fusion problem on the motor level. \cite{park:bn-service-robot} uses
+probabilistic modeling for service robots to provide users with high-level
+context-aware services required in home environment, and proposes a systematic
+modeling approach for modeling a number of Bayesian networks. In
+\cite{orozco:multisensor-bn} researchers have developed a system to integrate
 indirect measures of different sensors. This system is designed based on a
 Bayesian Network and can be applied to use any type of sensor which provides
 measures of the robot's environment independent of sensor types, environment and
-application of the robot.
-
-In \cite{bourgault:operator-multiple-robot} authors use Bayesian Networks to
-model interactions between humans and multiple semi-autonomous robots. They have
-modeled discrete operator decisions as probabilistic Bayesian Network blocks
-with conditional dependencies on individual system states.
-
-In \cite{prado:robot-emotion-bayesian} researchers propose a novel Bayesian
-approach to determine the emotional state the robot shall assume according to
-how the interlocutor is talking to it through a vocalization channel.
-
-In \cite{song:bn-service-robot} authors adopt Bayesian Networks and ontology
-together for modeling domain knowledge and reasoning objects in probabilistic
-framework for a service robot. In this work, they use objects as context
-information for predicting target object being present, since it can be occluded
-or small in indoor environments.
-
-In \cite{dearden:forward-model-robot} researchers use a Bayesian Network to
+application of the robot. In \cite{bourgault:operator-multiple-robot} authors
+use Bayesian Networks to model interactions between humans and multiple
+semi-autonomous robots. They have modeled discrete operator decisions as
+probabilistic Bayesian Network blocks with conditional dependencies on
+individual system states. In \cite{prado:robot-emotion-bayesian} researchers
+propose a novel Bayesian approach to determine the emotional state the robot
+shall assume according to how the interlocutor is talking to it through a
+vocalization channel. In \cite{song:bn-service-robot} authors adopt Bayesian
+Networks and ontology together for modeling domain knowledge and reasoning
+objects in probabilistic framework for a service robot. In this work, they use
+objects as context information for predicting target object being present, since
+it can be occluded or small in indoor environments. In
+\cite{dearden:forward-model-robot} researchers use a Bayesian Network to
 represent a forward model of a robot's actions to predict the consequences of
-the robot's actions on its own motor system and the environment.
-
-In \cite{montesano:affordances-bn} researchers propose a general object
-affordance model based on Bayesian networks linking actions, object features and
-action effects. The network is learnt by the robot through interaction with the
-surrounding objects.
-
-\cite{vladareanu:robot-naviation-bayesian} presents the navigation mobile robot
-systems for movement in non-stationary and non-structured environments, using a
-Bayesian approach for avoiding obstacles and dynamical stability control for
-motion on rough terrain.
-
-As another example, in \cite{chong:bbn-decision-planning} researchers explore
-the use of Dynamic Bayesian Networks as a decision process to aid a mobile robot
-in planning its surveillance route.
-
-In \cite{iwahashi:belief-system-hri} Iwahashi describes a method that enables
-the robot to learn a system of beliefs through multi-modal language interaction
-with the user. He uses Bayesian learning method to learn robot's decision and
-confidence functions.
-
+the robot's actions on its own motor system and the environment. In
+\cite{montesano:affordances-bn} researchers propose a general object affordance
+model based on Bayesian networks linking actions, object features and action
+effects. The network is learnt by the robot through interaction with the
+surrounding objects. \cite{vladareanu:robot-naviation-bayesian} presents the
+navigation mobile robot systems for movement in non-stationary and
+non-structured environments, using a Bayesian approach for avoiding obstacles
+and dynamical stability control for motion on rough terrain. As another example,
+in \cite{chong:bbn-decision-planning} researchers explore the use of Dynamic
+Bayesian Networks as a decision process to aid a mobile robot in planning its
+surveillance route. In \cite{iwahashi:belief-system-hri} Iwahashi describes a
+method that enables the robot to learn a system of beliefs through multi-modal
+language interaction with the user. He uses Bayesian learning method to learn
+robot's decision and confidence functions.
 \cite{grimes:imitation-robot-bayesian} presents learning imitative wholebody
 motions in a humanoid robot using probabilistic inference in Bayesian networks.
 Authors provide a model for exploiting prior information about whole-body
-motions gathered from observing a human performance of the motion.
+motions gathered from observing a human performance of the motion. 
 
-Intention recognition for an intelligent human-robot interaciton
-\cite{tahboub:hri-dbn}
-
-mobile-robot localization \cite{zhou:mobile-robot-localization}
-\cite{fox:bayesian-location}
-
+There are other applications such as intention recognition for intelligent
+human-robot interaciton \cite{tahboub:hri-dbn}, mobile-robot localization
+\cite{zhou:mobile-robot-localization} \cite{fox:bayesian-location}, and
 autonomous reconstruction of 3D images for indoor mobile robots
-\cite{delage:dbn-image-reconstruction}
-
-
-
+\cite{delage:dbn-image-reconstruction}. Here, we also provide applications of
+Bayesian Networks in agents. 
 
 In \cite{arinbjarnar:bn-agent-drama} researchers propose an efficient and
 scalable Bayesian Network techniques using relevance reasoning, that are
 suitable for the needs of their autonomous agents in directed emergent drama and
 allow for real-time decision making. They do this by extracting only a relevant
-part of the network and only update the values in this reduced network.
-
-In \cite{xiang:dai-bn} Xiang extends Multiply Sectioned Bayesian Networks
-(MSBNs) for single-agent systems into a framework for multi-agent distributed
+part of the network and only update the values in this reduced network. In
+\cite{xiang:dai-bn} Xiang extends Multiply Sectioned Bayesian Networks (MSBNs)
+for single-agent systems into a framework for multi-agent distributed
 interpretation systems. In this work, each cooperative agent is represented as a
 Bayesian subnet that consumes its own computational resource, gathers its own
-evidence, and can answer queries.
-
-In \cite{saha:bayes-negotiation} authors present a decision architecture of the
-arguing agent. They propose a novel Bayesian network based argumentation and
-decision making framework that allows agents to utilize models of the other
-agents.
-
-
-
-internal models in multi-agent setting \cite{nielsen:fusion-bn-mas}
-
+evidence, and can answer queries. In \cite{saha:bayes-negotiation} authors
+present a decision architecture of the arguing agent. They propose a novel
+Bayesian network based argumentation and decision making framework that allows
+agents to utilize models of the other agents. In
+\cite{grootswagers:bbn-applications} authors provide a review of Bayesian
+network's applications in different domains including image interpretation and
+modeling cognitive processes. For all of the examples they explain how the
+Bayesian models are implemented, their practical use and their limitations.
+There are also other applications for Bayesian Networks for the agent, such as
+building internal models in multi-agent settings \cite{nielsen:fusion-bn-mas},
 knowledge representation of the agents \cite{bloemeke:agent-encapsulated-bn}
 \cite{santos:cognitive-knowledge-representation}
-\cite{martin:reasoning-action-bbn}
-
-modeling theory of mind \cite{baker:bayesian-tom}
-\cite{bello:cginitive-foundation-tom}
-
-modeling trustworthiness of agents \cite{tan:trust-bbn}
+\cite{martin:reasoning-action-bbn}, modeling theory of mind
+\cite{baker:bayesian-tom} \cite{bello:cginitive-foundation-tom}, and modeling
+trustworthiness of agents \cite{tan:trust-bbn}.
 
 \section{Conclusion}
 
