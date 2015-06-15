@@ -29,19 +29,19 @@ distributions to compute posterior probabilities based on evidence.
 
 \subsection{Bayesian Belief Networks}
 
-A \textit{Bayesian Belief Network} is a  directed acyclic graph consisting of
-nodes and edges which provides a graphical model for reasoning under
-uncertainty. Each node in the network represents a random variable from the
-domain. The state of each node is called \textit{belief} which based on the
-prior evidence reflects the posterior probability distribution of the other
-values associted with that node. Each node also has an associated
-\textit{Conditional Probability Table} (CPT) which represents the coniditonal
-probability of the variable given the value of its parents in the graph. Each
-individual edge between two variables represents the relation or conditional
-dependence between those two variables. Also, the explicit directions
-represented by arrows as directinoal edges are the notion of the causality in
-the network (see Figure \ref{fig:bbn}). They are always drawn from cause nodes
-to effect nodes, indicating dependencies between variables
+A \textit{Bayesian Belief Network} \cite{pearl:probabilistic-reasoning} is a 
+directed acyclic graph consisting of nodes and edges which provides a graphical
+model for reasoning under uncertainty. Each node in the network represents a
+random variable from the domain. The state of each node is called
+\textit{belief} which based on the prior evidence reflects the posterior
+probability distribution of the other values associted with that node. Each node
+also has an associated \textit{Conditional Probability Table} (CPT) which
+represents the coniditonal probability of the variable given the value of its
+parents in the graph. Each individual edge between two variables represents the
+relation or conditional dependence between those two variables. Also, the
+explicit directions represented by arrows as directinoal edges are the notion of
+the causality in the network (see Figure \ref{fig:bbn}). They are always drawn
+from cause nodes to effect nodes, indicating dependencies between variables
 \cite{das:decision-making-agents}. Assuming discrete variables, the strength of
 the relationship between variables is quantified by conditional probability
 distributions associated with each node.
@@ -911,18 +911,26 @@ Bayesian Network and can be applied to use any type of sensor which provides
 measures of the robot's environment independent of sensor types, environment and
 application of the robot.
 
+In \cite{bourgault:operator-multiple-robot} authors use Bayesian Networks to
+model interactions between humans and multiple semi-autonomous robots. They have
+modeled discrete operator decisions as probabilistic Bayesian Network blocks
+with conditional dependencies on individual system states.
+
 In \cite{song:bn-service-robot} authors adopt Bayesian Networks and ontology
 together for modeling domain knowledge and reasoning objects in probabilistic
 framework for a service robot. In this work, they use objects as context
 information for predicting target object being present, since it can be occluded
 or small in indoor environments.
 
-
+In \cite{dearden:forward-model-robot} researchers use a Bayesian Network to
+represent a forward model of a robot's actions to predict the consequences of
+the robot's actions on its own motor system and the environment.
 
 Intention recognition for an intelligent human-robot interaciton
 \cite{tahboub:hri-dbn}
 
 mobile-robot localization \cite{zhou:mobile-robot-localization}
+\cite{fox:bayesian-location}
 
 autonomous reconstruction of 3D images for indoor mobile robots
 \cite{delage:dbn-image-reconstruction}
@@ -949,9 +957,12 @@ internal models in multi-agent setting \cite{nielsen:fusion-bn-mas}
 
 knowledge representation of the agents \cite{bloemeke:agent-encapsulated-bn}
 \cite{santos:cognitive-knowledge-representation}
+\cite{martin:reasoning-action-bbn}
 
 modeling theory of mind \cite{baker:bayesian-tom}
 \cite{bello:cginitive-foundation-tom}
+
+modeling trustworthiness of agents \cite{tan:trust-bbn}
 
 \section{Conclusion}
 

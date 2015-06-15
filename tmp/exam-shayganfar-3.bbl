@@ -38,11 +38,24 @@ Mark Bloemeke and Scott Langevin.
 \newblock In {\em Proceedings of the Ninth International Conference on
   Autonomous Agents and Multiagent Systems (AAMAS-10)}, 2010.
 
+\bibitem{bourgault:operator-multiple-robot}
+Frederic Bourgault, Nisar Ahmed, Danelle Shah, and Mark Campbell.
+\newblock Probabilistic operator-multiple robot modeling using bayesian network
+  representation.
+\newblock In {\em AIAA Guidance, Navigation and Control Conference}, 2007.
+
 \bibitem{das:decision-making-agents}
 Subrata Das.
 \newblock {\em Foundations Of Decision-Making Agents: Logic, Probability and
   Modality}.
 \newblock World Scientific Publishing Co., 2008.
+
+\bibitem{dearden:forward-model-robot}
+Anthony Dearden and Yiannis Demiris.
+\newblock Learning forward models for robots.
+\newblock In {\em Proceedings of the 19th International Joint Conference on
+  Artificial Intelligence}, pages 1440--1445. Morgan Kaufmann Publishers Inc.,
+  2005.
 
 \bibitem{delage:dbn-image-reconstruction}
 Erick Delage, Honglak Lee, and Andrew~Y. Ng.
@@ -62,6 +75,11 @@ Francisco~J. Diez and Marek~J. Druzdzel.
 \newblock In L.~Nadel, editor, {\em Encyclopedia of Cognitive Science}, pages
   880--886. London: Nature Publishing Group, 2003.
 
+\bibitem{fox:bayesian-location}
+Dieter Fox, Jeffrey Hightower, Lin Liao, Dirk Schulz, and Gaetano Borriello.
+\newblock Bayesian filtering for location estimation.
+\newblock {\em IEEE Pervasive Computing}, 2:24--33, 2003.
+
 \bibitem{santos:cognitive-knowledge-representation}
 Eugene~Santos Jr.
 \newblock A cognitive architecture for adversary intent inferencing: Structure
@@ -79,6 +97,11 @@ Rakowsky~Uwe Kay.
 Kevin~B. Korb and Ann~E. Nicholson.
 \newblock {\em Bayesian Artificial Intelligence}.
 \newblock Taylor \& Francis, 2003.
+
+\bibitem{martin:reasoning-action-bbn}
+Yves Martin and Michael Thielscher.
+\newblock Integrating reasoning about actions and bayesian networks.
+\newblock In {\em ICAART}, 2010.
 
 \bibitem{nielsen:fusion-bn-mas}
 Soren~Holbech Nielsen and Simon Parsons.
@@ -98,6 +121,12 @@ Han-Saem Park and Sung-Bae Cho.
 \newblock A modular design of bayesian networks using expert knowledge:
   Context-aware home service robot.
 \newblock {\em Expert Systems with Applications}, 39(3):2629--2642, 2012.
+
+\bibitem{pearl:probabilistic-reasoning}
+Judea Pearl.
+\newblock {\em Probabilistic Reasoning in Intelligent Systems: Networks of
+  Plausible Inference}.
+\newblock Morgan Kaufmann Publishers Inc., 1988.
 
 \bibitem{russell:ai-modern}
 Stuart~J. Russell and Peter Norvig.
@@ -133,6 +162,11 @@ Karim~A. Tahboub.
 \newblock Intelligent human-machine interaction based on dynamic bayesian
   networks probabilistic intention recognition.
 \newblock {\em Journal of Intelligent and Robotic Systems}, 45(1):31--52, 2006.
+
+\bibitem{tan:trust-bbn}
+Colin Keng-Yan Tan.
+\newblock A belief augmented frame computational trust model.
+\newblock In {\em FLAIRS Conference}, pages 647--652. AAAI Press, 2005.
 
 \bibitem{tanimoto:ai-lisp}
 Steven Tanimoto.
