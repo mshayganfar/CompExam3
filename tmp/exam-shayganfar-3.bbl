@@ -44,6 +44,11 @@ Frederic Bourgault, Nisar Ahmed, Danelle Shah, and Mark Campbell.
   representation.
 \newblock In {\em AIAA Guidance, Navigation and Control Conference}, 2007.
 
+\bibitem{chong:bbn-decision-planning}
+Leon Chong and Raymond Jarvis.
+\newblock A dynamic bayesian network approach to surveillance decision
+  planning, 2010.
+
 \bibitem{das:decision-making-agents}
 Subrata Das.
 \newblock {\em Foundations Of Decision-Making Agents: Logic, Probability and
@@ -80,6 +85,20 @@ Dieter Fox, Jeffrey Hightower, Lin Liao, Dirk Schulz, and Gaetano Borriello.
 \newblock Bayesian filtering for location estimation.
 \newblock {\em IEEE Pervasive Computing}, 2:24--33, 2003.
 
+\bibitem{grimes:imitation-robot-bayesian}
+David~B. Grimes, Rawichote Chalodhorn, and Rajesh P.~N. Rao.
+\newblock Dynamic imitation in a humanoid robot through nonparametric
+  probabilistic inference.
+\newblock In {\em Proceedings of Robotics: Science and Systems (RSS’06)},
+  2006.
+
+\bibitem{iwahashi:belief-system-hri}
+Naoto Iwahashi.
+\newblock A method for the coupling of belief systems through human-robot
+  language interaction.
+\newblock In {\em The 12th IEEE International Workshop on Robot and Human
+  Interactive Communication}, pages 385--390, 2003.
+
 \bibitem{santos:cognitive-knowledge-representation}
 Eugene~Santos Jr.
 \newblock A cognitive architecture for adversary intent inferencing: Structure
@@ -102,6 +121,12 @@ Kevin~B. Korb and Ann~E. Nicholson.
 Yves Martin and Michael Thielscher.
 \newblock Integrating reasoning about actions and bayesian networks.
 \newblock In {\em ICAART}, 2010.
+
+\bibitem{montesano:affordances-bn}
+Luis Montesano, Manuel Lopes, Alexandre Bernardino, and Jose Santos-Victor.
+\newblock Modeling affordances using bayesian networks.
+\newblock In {\em IEEE/RSJ International Conference on Intelligent Robots and
+  Systems}, pages 4102--4107, 2007.
 
 \bibitem{nielsen:fusion-bn-mas}
 Soren~Holbech Nielsen and Simon Parsons.
@@ -128,10 +153,22 @@ Judea Pearl.
   Plausible Inference}.
 \newblock Morgan Kaufmann Publishers Inc., 1988.
 
+\bibitem{prado:robot-emotion-bayesian}
+Jose~Augusto Prado, Carlos Simplicio, and Jorge Dias.
+\newblock Robot emotional state through bayesian visuo-auditory perception.
+\newblock In Luis~M. Camarinha-Matos, editor, {\em Technological Innovation for
+  Sustainability}, pages 165--172. Springer Berlin Heidelberg, 2011.
+
 \bibitem{russell:ai-modern}
 Stuart~J. Russell and Peter Norvig.
 \newblock {\em Artificial Intelligence: A Modern Approach}.
 \newblock Pearson Education, 2003.
+
+\bibitem{saha:bayes-negotiation}
+Sabyasachi Saha and Sandip Sen.
+\newblock A bayes net approach to argumentation based negotiation.
+\newblock In {\em First International Workshop on Argumentation in Multi-Agent
+  Systems}, pages 208--222, 2004.
 
 \bibitem{schalkoff:intelligent-systems}
 Robert~J. Schalkoff.
@@ -178,6 +215,14 @@ Steven Tanimoto.
 Marc Toussaint.
 \newblock Bayesian inference for motion control and planning.
 \newblock Technical Report 2007-22, Machine Learning Group, TU Berlin, 2007.
+
+\bibitem{vladareanu:robot-naviation-bayesian}
+Luige Vladareanu, Gabriela Tont, Victor Vladareanu, Florentin Smarandache, and
+  Lucian Capitanu.
+\newblock The navigation mobile robot systems using bayesian approach through
+  the virtual projection method.
+\newblock In {\em Advanced Mechatronic Systems (ICAMechS)}, pages 498--503,
+  2012.
 
 \bibitem{xiang:dai-bn}
 Yang Xiang.
