@@ -125,11 +125,11 @@ relations, and associated CPTs for diagnosis of a lung cancer problem taken from
 \subsubsection{Markov Property}
 \label{sec:markov-property}
 
-In Bayesian Networks, each variable is independent of its non-descendants given
+In Bayesian networks, each variable is independent of its non-descendants given
 its parent variables. Therefore, there are no direct dependencies in the system
 being modeled other than those already explicitly shown via edges. Meaning,
 there is no hidden connection between variables. This is called \textit{Markov
-property} in a Bayesian Network. If Bayesian Networks do not adhere to Markov
+property} in a Bayesian network. If Bayesian networks do not adhere to Markov
 property, there will be redundant edges that connect independent variables
 together. Consequently, the network will not represent a minimal model.
 
@@ -137,15 +137,15 @@ together. Consequently, the network will not represent a minimal model.
 
 In many applications of probability, there are more than one random variable to
 be measured over the same sample space (e.g., existence of multiple causes
-for a lung cancer). A Bayesian Network provides a complete description of the
+for a lung cancer). A Bayesian network provides a complete description of the
 domain. Once we identify random variables and their probabilistic relationships,
 the values in a joint probability distribution can then be obtained from the
 probabilities relating the random variables. Therefore, all the entries in the
 full joint probability distribution can be calculated from the information in
 the network. There is also a fundamental assumption that in the underlying
-structure of the problem being modeled by a Bayesian Network, not every single
+structure of the problem being modeled by a Bayesian network, not every single
 node is connected to every other one \cite{korb:bayesian-ai}. Therefore, if
-there is such a problem structure, then a Bayesian Network can provide a compact
+there is such a problem structure, then a Bayesian network can provide a compact
 representation of a model for that problem. In the following formula
 \textit{P($x_1, x_2, \ldots, x_n$)} is an abbreviation for the conjunction of
 \textit{\textbf{n}} assignments to each variable. Hence, the following formula
@@ -179,10 +179,10 @@ false | P = high , S = true) \times P(P = high) \times P(S = true)$
 
 \subsubsection{Reasoning in Bayesian Networks}
 
-Reasoning in Bayesian Networks is the process of updating beliefs in the face of
+Reasoning in Bayesian networks is the process of updating beliefs in the face of
 evidence. In other words, it is the process of efficiently deducing the belief
 distribution over a particular subset of random variables given that we know the
-states of some other variables in the network. Bayesian Networks can be
+states of some other variables in the network. Bayesian networks can be
 conditioned upon any subset of their variables, supporting any direction of
 reasoning. Figure \ref{fig:reasoning-types} shows four different types of
 reasoning using the network shown in Figure \ref{fig:bbn}. These four types are
@@ -283,7 +283,7 @@ given the Markov property. If the two sets of nodes \textit{X} and \textit{Y}
 are \textit{d-separated} (directional-dependent separation) by an evidence set
 of nodes \textit{E}, then (given the Markov property) the two sets of nodes
 \textit{X} and \textit{Y} are conditionally independent given \textit{E}.
-d-separation is a topological criterion for Bayesian Networks
+d-separation is a topological criterion for Bayesian networks
 \cite{russell:ai-modern}. Figure \ref{fig:d-separation} shows how the evidence
 set of nodes \textit{E} is blocking the two sets of nodes \textit{X} and
 \textit{Y} in three different conditions. In a graph, a path is blocked given a
@@ -825,8 +825,8 @@ advantages and disadvantages. They are discussed in the following sections.
 
 \subsection{Advantages and Disadvantages of Belief Networks}
 
-Like any other computational formalism, Bayesian Networks offer certain
-advantages and disadvantages. Advantages of Bayesian Networks include:
+Like any other computational formalism, Bayesian networks offer certain
+advantages and disadvantages. Advantages of Bayesian networks include:
 
 \begin{itemize}
   \item Transparent representation of causal relationships between variables
@@ -847,7 +847,7 @@ advantages and disadvantages. Advantages of Bayesian Networks include:
   \item Computational tractability exists for most practical applications.
 \end{itemize}
 
-\noindent The followings are the disadvantage of Bayesian Networks:
+\noindent The followings are the disadvantage of Bayesian networks:
 
 \begin{itemize}
   \item A high level of effort is required to build network models where a
@@ -860,9 +860,9 @@ advantages and disadvantages. Advantages of Bayesian Networks include:
   \item Challenging to obtain experts' knowledge in the form of probability to
   build the network.
   
-  \item No feedback loops in the Bayesian Network's structure, which has an
+  \item No feedback loops in the Bayesian network's structure, which has an
   acyclic nature. This structure prevents typical feedback loops in design of
-  Bayesian Network models.
+  Bayesian network models.
 \end{itemize}
 
 \subsection{Advantages and Disadvantages of Dempster-Shafer Theory}
@@ -926,7 +926,7 @@ Advantages of Fuzzy Logic theory are:
 \section{Applications of Bayesian Networks}
 \label{sec:applications}
 
-There are different applications of Bayesian Networks in robots and autonomous
+There are different applications of Bayesian networks in robots and autonomous
 agents such as motion control, sensory data fusion, and modeling domain
 knowledge. In this section, we provide some of these applications.
 
@@ -934,7 +934,7 @@ In \cite{toussaint:bayesian-motion-planning} Toussaint proposes a new approach
 to robotic motion control and planning based on probabilistic inference. His
 method uses structured probabilistic models to represent a scenario and
 efficient inference techniques (belief propagation) to solve planning problems.
-He also uses Bayesian Networks to find solutions to problems combining multiple
+He also uses Bayesian networks to find solutions to problems combining multiple
 criteria or sources of information (sensor fusion) beside using them to solve a
 fusion problem on the motor level. \cite{park:bn-service-robot} uses
 probabilistic modeling for service robots to provide users with high-level
@@ -942,12 +942,12 @@ context-aware services required in home environments, and proposes a systematic
 modeling approach for modeling a number of Bayesian networks. In
 \cite{orozco:multisensor-bn} researchers have developed a system to integrate
 indirect measures of different sensors. This system is designed based on a
-Bayesian Network and can be applied to use any type of sensor which provides
+Bayesian network and can be applied to use any type of sensor which provides
 measures of the robot's environment independent of sensor types, environment and
 application of the robot. In \cite{bourgault:operator-multiple-robot} authors
-use Bayesian Networks to model interactions between humans and multiple
+use Bayesian networks to model interactions between humans and multiple
 semi-autonomous robots. They have modeled discrete operator decisions as
-probabilistic Bayesian Network blocks with conditional dependencies on
+probabilistic Bayesian network blocks with conditional dependencies on
 individual system states. In \cite{prado:robot-emotion-bayesian} researchers
 propose a novel Bayesian approach to determine the emotional state the robot
 shall assume according to how the interlocutor is talking to it through a
@@ -956,7 +956,7 @@ Networks and an ontology together for modeling domain knowledge and reasoning
 objects in a probabilistic framework for a service robot. In this work, they use
 objects as context information for predicting the target object being present,
 since it can be occluded or small in indoor environments. In
-\cite{dearden:forward-model-robot} researchers use a Bayesian Network to
+\cite{dearden:forward-model-robot} researchers use a Bayesian network to
 represent a forward model of a robot's actions to predict the consequences of
 the robot's actions on its own motor system and the environment. In
 \cite{montesano:affordances-bn} researchers propose a general object affordance
@@ -967,7 +967,7 @@ navigation mobile robot systems for movement in non-stationary and
 non-structured environments, using a Bayesian approach for avoiding obstacles
 and dynamical stability control for motion on rough terrain. As another example,
 in \cite{chong:bbn-decision-planning} researchers explore the use of Dynamic
-Bayesian Networks as a decision process to aid a mobile robot in planning its
+Bayesian networks as a decision process to aid a mobile robot in planning its
 surveillance route. In \cite{iwahashi:belief-system-hri} Iwahashi describes a
 method that enables the robot to learn a system of beliefs through multi-modal
 language interaction with the user. He uses the Bayesian learning method to
@@ -982,14 +982,14 @@ human-robot interaction \cite{tahboub:hri-dbn}, mobile-robot localization
 \cite{zhou:mobile-robot-localization} \cite{fox:bayesian-location}, and
 autonomous reconstruction of 3D images for indoor mobile robots
 \cite{delage:dbn-image-reconstruction}. Here, we also provide applications of
-Bayesian Networks in agents. 
+Bayesian networks in agents. 
 
 In \cite{arinbjarnar:bn-agent-drama} researchers propose an efficient and
-scalable Bayesian Network technique using relevance reasoning, that are
+scalable Bayesian network technique using relevance reasoning, that are
 suitable for the needs of their autonomous agents in directed emergent drama and
 allow for real-time decision making. They do this by extracting only a relevant
 part of the network and only update the values in this reduced network. In
-\cite{xiang:dai-bn} Xiang extends Multiply Sectioned Bayesian Networks (MSBNs)
+\cite{xiang:dai-bn} Xiang extends Multiply Sectioned Bayesian networks (MSBNs)
 for single-agent systems into a framework for multi-agent distributed
 interpretation systems. In this work, each cooperative agent is represented as a
 Bayesian subnet that consumes its own computational resource, gathers its own
@@ -1001,7 +1001,7 @@ allows agents to utilize models of the other agents. In
 networks' applications in different domains including image interpretation and
 modeling cognitive processes. For all of the examples they explain how the
 Bayesian models are implemented, their practical use and their limitations.
-There are also other applications for Bayesian Networks for the agent, such as
+There are also other applications for Bayesian networks for the agent, such as
 building internal models in multi-agent settings \cite{nielsen:fusion-bn-mas},
 knowledge representation of the agents \cite{bloemeke:agent-encapsulated-bn}
 \cite{santos:cognitive-knowledge-representation}
@@ -1016,7 +1016,7 @@ In this response, we started by generally understanding the importance of
 reasoning under uncertainty in intelligent machines. There are some theories
 explaining similar or different aspects of uncertainty. Each of these theories
 relates to the same concept of uncertainty from slightly different angles. For
-instance, Bayesian Networks rely on probability theory and assign one value
+instance, Bayesian networks rely on probability theory and assign one value
 to each existing variable and relate them based on their causal relationship.
 Dempster-Shafer theory as an evidential reasoning theory discusses whether there
 is any evidence for a particular belief rather than probability of its truth,
