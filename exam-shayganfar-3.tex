@@ -14,7 +14,7 @@
 \pagenumbering{arabic}
 
 \begin{center}
-{\LARGE{\textbf{Uncertainty in Artificial Intelligence}}} \\
+{\LARGE{\textbf{Uncertainty in Modeling and Reasoning About Beliefs}}} \\
 \Large\textsc{Ph.D. Comprehensive Exam} \\[1em]
 \large\textnormal{Mohammad Shayganfar - mshayganfar@wpi.edu} \\
 \large\textnormal{May, 26 2015}
@@ -22,12 +22,39 @@
 
 \section{Introduction to Uncertainty in AI}
 
-Problems with a large number of variables require maintaining large joint
-distributions to compute posterior probabilities based on evidence.
+In many practical problem-solving applications, the available knowledge is
+incomplete or inexact. In such cases, the available knowledge is inadequate to
+support logical reasonings. Humans use some techniques such as generalization
+and approximation when they face with uncertain information about the decision
+they should make. Athough these techniques are subject to error, humans still
+use them. Most of the times the sources of uncertainty, e,g., missing or noisy
+data, incomplete knowledge of a causality, are unpredictable or even
+unavoidable. Therefore, when we design intelliegent machines, they should be
+able to operate in ambiguous, uncertain environments, and yet provide the most
+acceptable results for us according to the conditions. The reasoning methods
+under uncertainty allow AI systems to use uncertain knowledge and make decisions
+while minimizing the risk \cite{tanimoto:ai-lisp}.
+
+There are some major theories of uncertainty in reasoning about beliefs in AI.
+In this response, first, we provide three of the most prominent theories
+including \textit{Bayesian Belief Networks} (probabilitic reasoning),
+\textit{Dempster-Shafer} theory (evidential reasoning), and \textit{Fuzzy Logic}
+(reasoning under ambiguity) -- see Sections \ref{sec:bbn}, \ref{sec:dst}, and
+\ref{sec:flt} respectively. There are other approaches such as rule-based
+systems which are emerged from early work on practical and intuitive systems for
+logical inference \cite{russell:ai-modern}. However, we do not review the
+description of these approaches due to their level of importance in the reviewed
+literature and time. This document continues by providing the advantages and
+disadvantages of the all three major theories we mentioned above (see Section
+\ref{sec:pros-cons}). Then, we briefly provide applications of the Bayesian
+Networks for robots and autonomous agents (see Section \ref{sec:applications}).
+This document ends with our conclusion about the theories of reasoning about
+beliefs under uncertainty (see Section \ref{sec:conclusion}).
 
 \section{Theories of Uncertainties}
 
 \subsection{Bayesian Belief Networks}
+\label{sec:bbn}
 
 A \textit{Bayesian Belief Network} \cite{pearl:probabilistic-reasoning} is a 
 directed acyclic graph consisting of nodes and edges which provides a graphical
@@ -275,6 +302,7 @@ dyspnoea are not observed, then smoking variable would have been d-separated
 from pollution (blocking condition 3).
 
 \subsection{Dempster-Shafer Theory}
+\label{sec:dst}
 
 In \cite{dempster:theory}, Dempster proposed a probabilistic framework based on
 lower and upper bounds on probabilities. In \cite{shafer:evidence-theory},
@@ -469,6 +497,7 @@ measure of conflict between the sources
 \cite{srivastava:evidential-reasoning-uncertainty}.
 
 \subsection{Fuzzy Logic Theory}
+\label{sec:flt}
 
 Fuzzy Logic, introduced by Zadeh in 1965 \cite{zadeh:fuzzy}, provides a
 mathematical framework to capture uncertainty. There are different kinds of
@@ -784,9 +813,8 @@ defuzzification step (see Section \ref{sec:defuzzification}).
   \label{fig:fuzzy-system}
 \end{figure}
 
-\subsection{Other approaches}
-
-\section{Strengths and Weaknesses}
+\section{Advantages and Disadvantages of Theories of Uncertainty}
+\label{sec:pros-cons}
 
 \subsection{Advantages and Disadvantages of Belief Networks}
 
@@ -889,6 +917,7 @@ Advantages of Fuzzy Logic theory are:
 \end{itemize}
 
 \section{Applications of Bayesian Networks}
+\label{sec:applications}
 
 There are different applications of Bayesian Networks in robots and autonomous
 agents such as motion control, sensory data fusion, and modeling domain
@@ -974,6 +1003,7 @@ knowledge representation of the agents \cite{bloemeke:agent-encapsulated-bn}
 trustworthiness of agents \cite{tan:trust-bbn}.
 
 \section{Conclusion}
+\label{sec:conclusion}
 
 \bibliographystyle{plain}
 \bibliography{mshayganfar}
